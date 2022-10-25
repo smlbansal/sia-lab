@@ -3619,7 +3619,7 @@ input, select, textarea {
 		padding: 20px;
 		}
 	section.cms-boxes .cms-boxes-outer .cms-boxes-items {
-		height: 200px;
+		height: 250px;
 		display: table;
 		width: 100%;
 		}
@@ -3654,17 +3654,3 @@ input, select, textarea {
 		margin: 20px 0 10px;
 		text-transform: uppercase;
 		}
-
-
-	.tiles {
-		width: 600px;
-		font-size: 0;
-		margin: 0 auto;
-	}
-	.tile {
-		width: calc(600px / 3);
-		display: inline-block;
-	} 
-	.tile h2 {
-		font-size: 20px;
-	}
