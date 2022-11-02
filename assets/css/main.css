@@ -3729,3 +3729,30 @@ input, select, textarea {
 		margin: 20px 0 10px;
 		text-transform: uppercase;
 		}
+
+
+
+
+    body {margin:0} /* addition */
+
+    .tab-content {
+      background-color: #ffffff;
+      padding: 0; /* shorthand */
+      margin-bottom: none;
+      /*display: block; by default*/
+      overflow: hidden;
+    }
+    
+    .tab-pane {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .tab-pane a {
+      flex: 1 0 auto; /* shorthand | flex-grow: 1; | flex-shrink: 0; | flex-basis: auto */
+    }
+    
+    .img-responsive {
+      display: block;
+      width: 100%;
+    }
