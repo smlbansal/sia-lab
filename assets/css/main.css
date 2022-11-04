@@ -37,7 +37,8 @@ body {
 :root {
   --color0:#000000;
   --color2:#ffac42;
-  --color1:#144759;
+  /*--color1:#144759;*/
+  --color1:#991B1E; /* USC Cardinal */
   --color3:#bde3ea;
   --color4:#ffffff;
 }
@@ -109,7 +110,8 @@ input, select, textarea {
 	}
 
 	body {
-		background: #FFFFFF;
+		/*background: #FFFFFF;*/
+		background: #ffffff;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after, body.is-resizing *, body.is-resizing *:before, body.is-resizing *:after {
@@ -159,45 +161,53 @@ input, select, textarea {
 		}
 
 	a {
+		color: var(--color1);
 		-moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		border-bottom: dotted 1px;
-		color: var(--color1);
+		/*border-bottom: dotted 1px;*/
 		text-decoration: none;
 	}
 
-		a:hover {
-			border-bottom-color: var(--color1);
-			color: var(--color1) !important;
-		}
+	a:hover {
+		border-bottom-color: var(--color1);
+		color: var(--color1) !important;
+	}
 
-			a:hover strong {
-				color: inherit;
-			}
+	a:hover strong {
+		color: inherit;
+	}
+
+	title {
+		color: var(--color1);
+	}
 
 	strong, b {
-		color: #3d4449;
+		/*color: #3d4449;*/
+		/*color: var(--color1)*/
 		font-weight: 600;
 	}
 
 	em, i {
 		font-style: italic;
+		font-size: 1.0em;
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		font-size: 1.0em;
+		margin: 0 0 1.5em 0;
+		color: #3d4449;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #3d4449;
+		/*color: #3d4449;*/ 
 		color: #7f888f;
 		font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 		/*font-family: "Source Sans Pro", Helvetica, sans-serif; */
-		font-weight: 700;
+		font-weight: 100;
 		line-height: 1.5;
-		margin: 0 0 1em 0;
+		margin: 0 0 0.75em 0;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -3036,7 +3046,7 @@ input, select, textarea {
 		}
 
 			#main > .inner > section {
-				padding: 6em 0 4em 0 ;
+				padding: 2em 0 4em 0 ;
 				border-top: solid 2px rgba(210, 215, 217, 0.75);
 			}
 
@@ -3347,7 +3357,7 @@ input, select, textarea {
 		display: -ms-flex;
 		display: flex;
 		border-bottom: solid 5px var(--color1);
-		padding: 6em 0 1em 0;
+		padding: 4em 0 1em 0;
 		position: relative;
 	}
 
@@ -3361,9 +3371,11 @@ input, select, textarea {
 
 		#header .logo {
 			border-bottom: 0;
-			color: inherit;
-			font-family: "Source Sans Pro", Helvetica, sans-serif;
+			color: var(--color1);
+			font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+			/*font-family: "Source Sans Pro", Helvetica, sans-serif;*/
 			font-size: 2.25em;
+			white-space: nowrap;
 		}
 
 		#header .icons {
