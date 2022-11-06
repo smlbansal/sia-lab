@@ -34,85 +34,51 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo"><strong>Somil Bansal</strong></a>
-									<ul class="icons">
-										<li><a href="https://github.com/smlbansal" class="icon brands fa-github"><span class="label">Medium</span></a></li>
-									</ul>
+									<a href="index.html" class="logo"><strong>Learning and Intelligent Robotics</strong></a>
 								</header>
 
 							<!-- Content -->
-								<section>
-									<!-- Content -->
-										<h2 id="content">1) Data-efficient task-based learning using models and optimal control </h2>
-										<p> Autonomous systems will inevitably experience external effects in unstructured environments, which are often hard to model using first principles. I have developed learning frameworks that leverage methods from system identification (SysID) and optimal control to efficiently capture these effects during the controller design process.
-										<br>
-										<br>
-										These frameworks include both learning the residual dynamics of the system while using the already known system structure, as well as learning models of external effects that are specific to the control task at hand. The latter does not necessarily learn the most accurate dynamics model; instead, it identifies a “coarse” model that can be learned with a small amount of data, and yet yields the best closed-loop controller performance when provided to the optimal control method used.
-
-										<li><a href="https://arxiv.org/abs/1703.09260"> aDOBO: Goal-Driven Dynamics Learning via Bayesian Optimization</a></li>
-										<li><a href="https://arxiv.org/abs/1909.05699"> Closed-Loop Model Selection for Kernel-based Models Using Bayesian Optimization</a></li>
-										<li><a href="https://arxiv.org/abs/1610.05863"> Learning Quadrotor Dynamics Using Neural Network for Flight Control</a></li>
-										<li><a href="https://arxiv.org/abs/1709.03153"> MBMF: Model-Based Priors for Model-Free Reinforcement Learning</a></li>
+							<!-- Content -->
+							<section>
+								<!-- Content -->
+								<h2 id="content"> Goal-Driven Dynamics Learning via Bayesian Optimization </h2>
+								<div id="banner" class="content">
+									<div class="image26 object">
+										<img src="images/aDobo.png" style="height: 200px; width: 300px" alt="">
+									</div>
+									<span class="content">
+										<p>
+											In this work we show our work, Human Active Navigation Dataset (HumANav), a codebase for photorealistic simulations of humans in indoor office environments, that can be enabled zero-shot transfer of learning based navigation algorithms directly from simulation to reality. We hope that HumANav can be a useful tool for the broader visual navigation, computer vision, and robotics communities.
 										</p>
-
-										<center>
-											<div class="row">
-												<!-- <div class="col-4"><span class="image fit"><img src="images/Crazyflie_v2.png"  style="height: 200px; width: auto" alt="" /></span></div> -->
-												<div class="col-4"><img src="images/Crazyflie_v2.png"  style="height: 250px; width: auto" alt="" /><p>Learning residual aerodynamic effects for an improved control performance.</p></div>
-												<!-- <div class="col-4"><span class="image fit"><img src="images/kernel_selection.png" style="height: 200px; width: auto" alt="" /></span></div> -->
-												<div class="col-4"><img src="images/kernel_selection.png" style="height: 250px; width: auto" alt="" /><p>aDOBO uses learning with optimal control to stir jelly in a given pattern.</p></div>
-												<div class="col-4"><iframe width="400px" height="250px" src="https://www.youtube.com/embed/Too_GmSzOAA?start=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>Our presentation on aDOBO from the IEEE Conference on Decision and Control (CDC), 2017.</p></div>
-											</div>
-										</center>
-
-										<h2 id="content">2)	Data-efficient architectures for learning-based perception with model-based control </h2>
-										<p> In many applications of interest, simple and well understood dynamics models are sufficient for control, and it is rather the vision and perception components that require learning. In this line of work, I focus on developing perception-action loops that efficiently combine deep learning-based perception with an underlying dynamics model for control, such as to navigate in a priori unknown environments. Leveraging underlying dynamics and feedback-based control not only accelerate learning, but also leads to trajectories that are robust to variations in physical properties and noise in actuation. 
-
-										<li><a href="https://smlbansal.github.io/LB-WayPtNav/"> Combining Optimal Control and Learning for Visual Navigation in Novel Environments</a></li>
+										<a href="https://arxiv.org/pdf/1703.09260.pdf">[Paper]</a> <a href="https://www.youtube.com/watch?v=Too_GmSzOAA">[Video]</a>
+									</span>
+								</div> 
+								<h2 id="content"> Visual Navigation Among Humans With Optimal Control as a Supervisor</h2>
+								<div id="banner" class="content">
+									<div class="image26 object">
+										<img src="images/humanav.png" style="height: 225px; width: auto" alt="">
+									</div>
+									<span class="content">
+										<p>
+											In this work we show our work, Human Active Navigation Dataset (HumANav), a codebase for photorealistic simulations of humans in indoor office environments, that can be enabled zero-shot transfer of learning based navigation algorithms directly from simulation to reality. We hope that HumANav can be a useful tool for the broader visual navigation, computer vision, and robotics communities.
 										</p>
-
-										<center>
-											<div class="row">
-												<div class="col-4"><img src="images/visual_nav.png"  style="height: 250px; width: auto" alt="" /><p>Learning-based perception with model-based control for data-efficient navigation in unseen environments.</p></div>
-												<div class="col-4"><iframe width="400px" height="250px" src="https://www.youtube.com/embed/7nC19Ai9u5E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>A brief video explaining the key idea behind our framework for autonomous navigation in completely novel environments.</p></div>
-											</div>
-										</center>
-
-										<h2 id="content">3)	Advancing the theory of optimal control for scalable safety analysis of learning-enabled systems </h2>
-										<p> In addition to improving data-efficiency, the models can also be used to design learning-based systems that are analyzable. In my work, I use model-based Hamilton-Jacobi-Isaacs (HJI) reachability analysis for safe learning and exploration. HJI analysis provides both the set of safe states and the corresponding safe controller for general nonlinear system dynamics. Since all system constraints are satisfied within this set, learning can be performed safely inside it. 
-										<br>
-										<br>
-										The main challenge is to scale HJI analysis to real-world autonomous systems because of its exponential computational complexity with respect to the number of state variables. In my work, I address this challenge on multiple fronts by leveraging (a) the structure in dynamics and control strategy, (b) offline computations, and (c) modern computational tools to perform this analysis tractably. 
-
-										<li><a href="https://arxiv.org/abs/1603.05208">Safe Sequential Path Planning of Multi-Vehicle Systems Under Disturbances and Imperfect Information</a></li>
-										<li><a href="Papers/Sequential_Trajectory_Planning.pdf">BEACLS: a C++- based reachability toolbox that leverages modern computational tools such as GPUs to improve computation speed of HJI reachability by nearly 100 times.</a></li>
-										<li><a href="https://arxiv.org/abs/1903.07715">Reachability-Based Safety Guarantees using Efficient Initializations</a></li>
+										<a href="https://arxiv.org/pdf/2003.09354.pdf">[Paper]</a> <a href="https://smlbansal.github.io/LB-WayPtNav-DH/">[Project Website]</a><a href="https://github.com/vtolani95/HumANav-Release">[Code]</a>
+									</span>
+								</div> 
+								<h2 id="content"> Combining Optimal Control and Learning for Visual Navigation in Novel Environments</h2>
+								<div id="banner" class="content">
+									<div class="image26 object">
+										<img src="images/visual_nav.png" style="height: 225px; width: auto" alt="">
+									</div>
+									<span class="content">
+										<p>
+											Real-world autonomous vehicles often operate in a priori unknown environments. Since most of these systems are safety-critical, it is important to ensure they operate safely in the face of environment uncertainty, such as unseen obstacles. Current safety analysis tools enable autonomous systems to reason about safety given full information about the state of the environment a priori. However, these tools do not scale well to scenarios where the environment is being sensed in real time, such as during navigation tasks. In this work, we propose a novel, real-time safety analysis method based on Hamilton-Jacobi reachability that provides strong safety guarantees despite environment uncertainty. Our safety method is planner-agnostic and provides guarantees for a variety of mapping sensors. We demonstrate our approach in simulation and in hardware to provide safety guarantees around a state-of-the-art vision-based, learning-based planner.
 										</p>
-
-										<center>
-											<div class="row">
-												<div class="col-4"><img src="images/comp_time.pdf"  style="height: 250px; width: auto" alt="" /><p>A 50-UAV reachability analysis takes less than 2 minutes with the CUDA implementation in BEACLS compared to 2.8 hours with the existing implementations.</p></div>
-												<div class="col-4"><iframe width="400px" height="250px" src="https://www.youtube.com/embed/1ocaBGZqSAE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>Provably safe trajectory planning for large-scale multiple UAV systems using Hamilton-Jacobi reachability for various vehicle densities and wind speeds. </p></div>
-											</div>
-										</center>
-
-										<h2 id="content">4) Safety assurance for learning-enabled systems in unknown and human-centric environments </h2>
-										<p> As the autonomous system is operating in its environment, it may experience changes in system dynamics or external disturbances, or it may evolve via learning-in-the-loop. Consequently, safety assurances need to be evaluated and updated at operation-time. In this line of work, I build upon the developed tools in 3) to construct safety envelopes around learning-based perception and human motion prediction components, allowing robust motion plans to avoid collisions with obstacles and humans.
-
-										<li><a href="https://smlbansal.github.io/website-safe-navigation/">An Efficient Reachability-Based Framework for Provably Safe Autonomous Navigation in Unknown Environments</a></li>
-										<li><a href="https://arxiv.org/abs/1902.10320">A New Simulation Metric to Determine Safe Environments and Controllers for Systems with Unknown Dynamics</a></li>
-										<li><a href="https://abajcsy.github.io/hallucinate/">A Hamilton-Jacobi Reachability-Based Framework for Predicting and Analyzing Human Motion for Safe Planning</a></li>
-										</p>
-
-										<center>
-											<div class="row">
-												<div class="col-4"><iframe width="300px" height="200px" src="https://www.youtube.com/embed/BAm3DJFwHis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>Hamilton-Jacobi reachability-based framework for computing a safety envelope around the learning-based perception component.</p></div>
-												<div class="col-4"><img src="images/spec.png"  style="height: 200px; width: auto" alt="" /><p>Combining model-based and sampling-based methods for the safety analysis of a lane-keeping perception module.</p></div>
-												<div class="col-4"><<iframe width="300px0" height="200px" src="https://www.youtube.com/embed/uZi-zIi1S6A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p> Hamilton-Jacobi reachability analysis for finding all possible changes in the data-driven human prediction model for safe robot planning.</p></div>
-											</div>
-										</center>
-
-								</section>
+										<a href="https://arxiv.org/pdf/1903.02531.pdf">[Paper]</a> <a href="https://smlbansal.github.io/LB-WayPtNav/">[Project Website]</a><a href="https://youtu.be/7nC19Ai9u5E">[Video]</a>
+									</span>
+								</div> 
+								<h2>For a more exhaustive list of our research work please go <a href="publications.html"><u>HERE!</u></a>  </h2> 
+							</section>
 						</div>
 					</div>
 
@@ -127,7 +93,6 @@
 									</header>
 									<ul>
 										<li><a href="index.html">Homepage</a></li>
-										
 										<li><a href="research.html">Research</a></li>
 										<li><a href="people.html">People</a></li>
 										<li><a href="teaching.html">Teaching</a></li>
