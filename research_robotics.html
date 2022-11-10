@@ -41,30 +41,7 @@
 							<!-- Content -->
 							<section>
 								<!-- Content -->
-								<h2 id="content"> Goal-Driven Dynamics Learning via Bayesian Optimization </h2>
-								<div id="banner" class="content">
-									<div class="image26 object">
-										<img src="images/aDobo.png" style="height: 200px; width: 300px" alt="">
-									</div>
-									<span class="content">
-										<p>
-											In this work we show our work, Human Active Navigation Dataset (HumANav), a codebase for photorealistic simulations of humans in indoor office environments, that can be enabled zero-shot transfer of learning based navigation algorithms directly from simulation to reality. We hope that HumANav can be a useful tool for the broader visual navigation, computer vision, and robotics communities.
-										</p>
-										<a href="https://arxiv.org/pdf/1703.09260.pdf">[Paper]</a> <a href="https://www.youtube.com/watch?v=Too_GmSzOAA">[Video]</a>
-									</span>
-								</div> 
-								<h2 id="content"> Visual Navigation Among Humans With Optimal Control as a Supervisor</h2>
-								<div id="banner" class="content">
-									<div class="image26 object">
-										<img src="images/humanav.png" style="height: 225px; width: auto" alt="">
-									</div>
-									<span class="content">
-										<p>
-											In this work we show our work, Human Active Navigation Dataset (HumANav), a codebase for photorealistic simulations of humans in indoor office environments, that can be enabled zero-shot transfer of learning based navigation algorithms directly from simulation to reality. We hope that HumANav can be a useful tool for the broader visual navigation, computer vision, and robotics communities.
-										</p>
-										<a href="https://arxiv.org/pdf/2003.09354.pdf">[Paper]</a> <a href="https://smlbansal.github.io/LB-WayPtNav-DH/">[Project Website]</a><a href="https://github.com/vtolani95/HumANav-Release">[Code]</a>
-									</span>
-								</div> 
+
 								<h2 id="content"> Combining Optimal Control and Learning for Visual Navigation in Novel Environments</h2>
 								<div id="banner" class="content">
 									<div class="image26 object">
@@ -72,11 +49,38 @@
 									</div>
 									<span class="content">
 										<p>
-											Real-world autonomous vehicles often operate in a priori unknown environments. Since most of these systems are safety-critical, it is important to ensure they operate safely in the face of environment uncertainty, such as unseen obstacles. Current safety analysis tools enable autonomous systems to reason about safety given full information about the state of the environment a priori. However, these tools do not scale well to scenarios where the environment is being sensed in real time, such as during navigation tasks. In this work, we propose a novel, real-time safety analysis method based on Hamilton-Jacobi reachability that provides strong safety guarantees despite environment uncertainty. Our safety method is planner-agnostic and provides guarantees for a variety of mapping sensors. We demonstrate our approach in simulation and in hardware to provide safety guarantees around a state-of-the-art vision-based, learning-based planner.
+											Real-world autonomous vehicles often need to navigate in a priori unknown environments. Learning-based methods have led to high-performing policies in such settings based on robot perceptual inputs, but tend to have non-robust behaviors in new environments. We propose an integrated approach that uses machine learning only for high-level planning based on perceptual information; this high-level plan is then used for low-level planning and control via leveraging classical model-based, control-theoretic approaches. The modular policy leads to a significantly better performance in new, unseen buildings compared to pure learning- based approaches. In addition, we demonstrate that a navigation policy encapsulated in this fashion can be transferred from simulation to reality directly with no retraining or finetuning, demonstrating the robust generalization capabilities of the learned policy. Finally, a side advantage of our integrated policy is its significant data efficiency compared to pure learning-based approaches (a 10x improvement in sample complexity for a given performance level in our preliminary results).
 										</p>
 										<a href="https://arxiv.org/pdf/1903.02531.pdf">[Paper]</a> <a href="https://smlbansal.github.io/LB-WayPtNav/">[Project Website]</a><a href="https://youtu.be/7nC19Ai9u5E">[Video]</a>
 									</span>
 								</div> 
+
+								<h2 id="content"> Visual Navigation Among Humans With Optimal Control as a Supervisor</h2>
+								<div id="banner" class="content">
+									<div class="image26 object">
+										<img src="images/humanav.png" style="height: 225px; width: auto" alt="">
+									</div>
+									<span class="content">
+										<p>
+											Real world navigation requires robots to operate in unfamiliar, dynamic environments, sharing spaces with humans. Navigating around humans is especially difficult because it requires predicting their future motion, which can be quite challenging. We propose a novel framework for navigation around humans which combines learning-based perception with model-based optimal control. The proposed framework learns to anticipate and react to peoples' motion based only on a monocular RGB image, without explicitly predicting the future human motion. Our method generalizes well to unseen buildings and humans in both simulation and real world environments. Furthermore, our experiments demonstrate that combining model-based control and learning leads to better and more data-efficient navigational behaviors as compared to a purely learning based approach.
+										</p>
+										<a href="https://arxiv.org/pdf/2003.09354.pdf">[Paper]</a> <a href="https://smlbansal.github.io/LB-WayPtNav-DH/">[Project Website]</a><a href="https://github.com/vtolani95/HumANav-Release">[Code]</a>
+									</span>
+								</div> 
+
+								<h2 id="content"> Goal-Driven Dynamics Learning via Bayesian Optimization </h2>
+								<div id="banner" class="content">
+									<div class="image26 object">
+										<img src="images/Crazyflie_v2.png" style="height: 200px; width: auto" alt="">
+									</div>
+									<span class="content">
+										<p>
+											Autonomous systems will inevitably experience external effects in unstructured environments, which are often hard to model using first principles. In this work, we develop a data-driven framework to learn a model of external effects that are specific to the control task at hand. This does not necessarily lead to learning the most accurate dynamics model; instead, it identifies a “coarse and local” model that can be learned with a small amount of data, and yet yields the best closed-loop controller performance when provided to the optimal control method used.
+										</p>
+										<a href="https://arxiv.org/pdf/1703.09260.pdf">[Paper]</a> <a href="https://www.youtube.com/watch?v=Too_GmSzOAA">[Video]</a>
+									</span>
+								</div> 
+
 								<h2>For a more exhaustive list of our research work please go <a href="publications.html"><u>HERE!</u></a>  </h2> 
 							</section>
 						</div>
