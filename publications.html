@@ -86,6 +86,8 @@
 											<a href="https://hybridreachability.github.io/website-hybrid-roa/">[Code and Videos]</a> 
 										</p>
 
+										<span id="show_1" style="display: none;">
+
 										<!-- <h2 id="content"> <u>2021</u> </h2> -->
 										<p> <strong> DeepReach: A Deep Learning Approach to High-Dimensional Reachability </strong> 
 											<br> Somil Bansal, Claire J. Tomlin
@@ -134,6 +136,9 @@
 											<a href="https://sfumars.com/wp-content/papers/2019_tac_fastrack.pdf">[PDF]</a> 
 										</p>
 
+										</span>
+
+										<span id="show_2" style="display: none;">
 										<!-- <h2 id="content"> <u>2019</u> </h2> -->
 										<p> <strong> Combining Optimal Control and Learning for Visual Navigation in Novel Environments </strong> 
 											<br> Somil Bansal, Varun Tolani, Saurabh Gupta, Jitendra Malik, Claire J. Tomlin
@@ -239,6 +244,10 @@
 											<a href="Papers/EV_Charging.pdf">[PDF]</a> 
 											<a href="bib/power/conference/voltcontrol.txt">[BibTeX]</a> 
 										</p>
+										</span>
+
+										<button onclick="show()" id="show_btn" style="margin-bottom: 30px;">Show More</button>
+										<button onclick="hide()" id="hide_btn" style="margin-bottom: 30px; display: none;">Show Less</button>
 
 										<h2 id="content"> <u>Book Chapters</u> </h2>
 										<p> <strong> Control and Safety of Autonomous Vehicles with Learning-Enabled Components </strong> 
@@ -338,6 +347,30 @@
             <script src="assets/js/breakpoints.min.js"></script>
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
-      
+
+		<!-- Show More/Less functionality -->
+		<script>
+			const show_btn = document.getElementById("show_btn");
+			const hide_btn = document.getElementById("hide_btn");
+			const max_show_index = 2;
+			let show_index = 0;
+			function show() {
+				show_index = Math.min(show_index + 1, max_show_index);
+				document.getElementById("show_" + show_index).style.display = "inline";
+				if (show_index >= max_show_index) {
+					show_btn.style.display = "none";
+				}
+				hide_btn.style.display = "inline"
+			}
+			function hide() {
+				document.getElementById("show_" + show_index).style.display = "none";
+				show_index = Math.max(show_index - 1, 0);
+				if (show_index <= 0) {
+					hide_btn.style.display = "none";
+				}
+				show_btn.style.display = "inline"
+			}
+		</script>
+		
         </body>
       </html>
