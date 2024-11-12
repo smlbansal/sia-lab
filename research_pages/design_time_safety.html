@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Somil Bansal</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-78683315-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../index.html" class="logo">Learning Safe and Robust Controllers</a>
+									<ul class="icons">
+										<li><a href="https://github.com/sia-lab-git" class="icon brands fa-github"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<p> 
+										Machine learning presents a promising approach to developing intelligent robotic systems, primarily due to the ability of modern deep learning methods to elegantly process rich perceptual inputs and leverage past data for control. However, the inclusion of machine learning in the control loop presents new outstanding challenges. Neural network-based methods, while powerful, can be brittle when faced with environmental changes, leading to errors that might result in catastrophic system failures and safety risks, as exemplified by recent self-driving car incidents. 
+										</br>
+										</br>
+										In this research thrust, we focus on developing methods that lead to inherently safe and robust controllers for autonomous systems by incorporating safety requirements in the training process itself. We have been studying a number of open research questions in this area:
+									</p>
+									<ul type="1" style="list-style-position:inside;">
+										<li>How can we learn provably safe controllers from data? How can we scale these methods to high-dimensional systems?</li>
+										<li>How can we learn safe controllers for systems with unknown or black box or hybrid dynamics?</li>
+										<li>How can we combine model-based and data-driven techniques to improve the controller's robustness and performance?</li> 
+										<li>How can we improve the safety of RL-based and imitation learning-based policies?</li> 
+									</ul>
+
+									<!-- Content -->
+									<h2 id="content"> DeepReach: A Physics-Informed Machine Learning Approach to Learn Safe Controllers</h2>
+									<div id="banner" class="content">
+										<div class="image26 object">
+											<img src="../images/research_images/deepreach.png" style="height: 200px; width: auto" alt="">
+										</div>
+										<span class="content">
+											<p>
+												DeepReach leverages recent advances in neural PDE solvers to tractably solve high-dimensional reachability problems. The computational requirements of DeepReach do not scale directly with the state dimension, but rather with the complexity of the underlying reachable tube. DeepReach achieves comparable results to the state-of-the-art reachability methods, does not require any explicit supervision for the PDE solution, can easily handle external disturbances, adversarial inputs, and system constraints, and also provides a safety controller for the system.
+											</p>
+											<a href="https://arxiv.org/abs/2011.02082">[Paper]</a> <a href="https://github.com/smlbansal/deepreach.git">[Code]</a>
+										</span>
+									</div> 
+
+                                    <h2 id="content"> Combining Optimal Control and Learning for Visual Navigation in Novel Environments</h2>
+                                    <div id="banner" class="content">
+                                        <div class="image26 object">
+                                            <img src="../images/research_images/visnav2.gif" style="height: 225px; width: auto" alt="">
+                                        </div>
+                                        <span class="content">
+                                            <p>
+                                                Real-world autonomous vehicles often need to navigate in a priori unknown environments. In this work, we propose a modular approach that enables autonomous navigation in unknown enviornments using only the monocular RGB images from an onboard camera. Our approach uses machine learning for high-level planning based on perceptual information; this high-level plan is then used for low-level planning and control via leveraging classical model-based, control-theoretic approaches. This modular policy leads to a significantly better performance in new, unseen buildings compared to pure learning- based approaches. In addition, we demonstrate that a navigation policy encapsulated in this fashion can be transferred from simulation to reality directly with no retraining or finetuning, demonstrating the robust generalization capabilities of the learned policy. Finally, a side advantage of our integrated policy is its significant data efficiency compared to pure learning-based approaches (a 10x improvement in sample complexity!).
+                                            </p>
+                                            <a href="https://arxiv.org/pdf/1903.02531.pdf">[Paper]</a> <a href="https://smlbansal.github.io/LB-WayPtNav/">[Project Website]</a><a href="https://youtu.be/7nC19Ai9u5E">[Video]</a>
+                                        </span>
+                                    </div> 
+
+                                    <h2 id="content"> Visual Navigation Among Humans With Optimal Control as a Supervisor</h2>
+                                    <div id="banner" class="content">
+                                        <div class="image26 object">
+                                            <img src="../images/research_images/humanav.gif" style="height: 225px; width: auto" alt="">
+                                        </div>
+                                        <span class="content">
+                                            <p>
+                                                Autonomous robots often navigate in unfamiliar, dynamic environments, where they need to share the space with humans. Navigating around humans is especially difficult because it requires predicting their future motion, which can be quite challenging. We propose a novel framework for navigation around humans which combines learning-based perception with model-based optimal control. The proposed framework learns to anticipate and react to peoples' motion based only on a monocular RGB image, without explicitly predicting the future human motion. Our method generalizes well to unseen buildings and humans in both simulation and real world environments. Furthermore, our experiments demonstrate that combining model-based control and learning leads to better and more data-efficient navigational behaviors as compared to a purely learning based approach.
+                                            </p>
+                                            <a href="https://arxiv.org/pdf/2003.09354.pdf">[Paper]</a> <a href="https://smlbansal.github.io/LB-WayPtNav-DH/">[Project Website]</a><a href="https://github.com/vtolani95/HumANav-Release">[Code]</a>
+                                        </span>
+                                    </div> 
+
+									<h2>For a more exhaustive list of our research work please go <a href="../publications.html"><u>HERE!</u></a>  </h2> 
+								</section>
+						</div>
+					</div>
+
+													<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>SIA Lab</h2>
+									</header>
+									<ul>
+										<li><a href="../index.html">Homepage</a></li>
+										
+										<li><a href="../research.html">Research</a></li>
+										<li><a href="../people.html">People</a></li>
+										<li><a href="../teaching.html">Teaching</a></li>
+										<li>
+											<span class="opener">Outreach</span>
+											<ul>
+												<li><a href="../tutorial.html">Tutorials and Workshops</a></li>
+												<li><a href="../ug_and_g.html">UG and Graduate</a></li>
+												<li><a href="../k12.html">K-12</a></li>
+											</ul>
+										</li>
+										<li><a href="../publications.html">Publications</a></li>
+										<li><a href="../talks.html">Talks</a></li>
+										<li><a href="../joinus.html">Join Us!</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</div>
+            
+                        </div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
