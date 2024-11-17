@@ -43,6 +43,88 @@
 							<!-- Content -->
 							<section>
 								<p> In this research thrust, we focus on advancing theoretical and computational algorithms for providing safe controllers and safety sets for complex autonomous systems. These include high-dimensional autonomous systems with nonlinear dynamics, systems with continuous and discrete control inputs (i.e., hybrid dynamics), multi-agent systems, etc. We also study how to maintain a safety and performance tradeoff for such autonomous systems. </p>
+								
+
+								<h2 id="content"> Reachability Analysis for Black-Box Dynamical Systems</h2>
+								<div id="banner" class="content">
+									<div class="image26 object">
+										<img src="../images/research_images/blackbox_reachability.png" style="height: 200px; width: auto" alt="">
+									</div>
+									<span class="content">
+										<p>
+											Hamilton-Jacobi (HJ) reachability analysis is a powerful framework for ensuring safety and performance in autonomous systems. However, existing methods typically rely on a white-box dynamics model of the system, limiting their applicability in many practical robotics scenarios where only a black-box model of the system is available. In this work, we propose a novel reachability method to compute reachable sets and safe controllers for black-box dynamical systems. Our approach efficiently approximates the Hamiltonian function using samples from the black-box dynamics. This Hamiltonian is then used to solve the HJ Partial Differential Equation (PDE), providing the reachable set of the system. The proposed method can be applied to general nonlinear systems and can be seamlessly integrated with existing reachability toolboxes for white-box systems to extend their use to black-box systems.
+										</p>
+										<a href="https://arxiv.org/abs/2410.07796">[Paper]</a> <a href="https://github.com/sia-lab-git/blackbox_reachability">[Code]</a>
+									</span>
+								</div>
+
+								<h2 id="content"> Providing Safety Assurances for Systems with Unknown Dynamics</h2>
+								<div id="banner" class="content">
+									<div class="image26 object">
+										<img src="../images/research_images/safe_assurances_tbot.gif" style="height: 200px; width: auto" alt="">
+									</div>
+									<span class="content">
+										<p>
+											As autonomous systems become more complex and integral in our society, the need to accurately model and safely control these systems has increased significantly. In the past decade, there has been tremendous success in using deep learning techniques to model and control systems that are difficult to model using first principles. However, providing safety assurances for such systems remains difficult, partially due to the uncertainty in the learned model. In this work, we aim to provide safety assurances for systems whose dynamics are not readily derived from first principles and, hence, are more advantageous to be learned using deep learning techniques. Given the system of interest and safety constraints, we learn an ensemble model of the system dynamics from data. Leveraging ensemble uncertainty as a measure of uncertainty in the learned dynamics model, we compute a maximal robust control invariant set, starting from which the system is guaranteed to satisfy the safety constraints under the condition that realized model uncertainties are contained in the predefined set of admissible model uncertainty.
+										</p>
+										<a href="https://ieeexplore.ieee.org/abstract/document/10543106">[Paper]</a> <a href="https://github.com/haowwang/safety_assurances_for_unknown_dynamics">[Code]</a>
+									</span>
+								</div>
+
+								<h2 id="content"> Hamilton-Jacobi Reachability Analysis for Hybrid Systems with Controlled and Forced Transitions</h2>
+								<div id="banner" class="content">
+									<video width="500" height="300" controls="controls" poster="image" preload="true">
+										<source src="../images/research_images/hybrid_reach_quadruped.mp4" type="video/mp4" style="height: 150px; width: auto">
+									</video>
+									<!-- <div class="image26 object">
+										<video src="../images/research_images/hybrid_reach_quadruped.mp4" type="video/mp4" style="height: 200px; width: autoplay">
+									</div> -->
+									<span class="content">
+										<p>
+											Hybrid dynamical systems with nonlinear dynamics are one of the most general modeling tools for representing robotic systems, especially contact-rich systems. However, providing guarantees regarding the safety or performance of nonlinear hybrid systems remains a challenging problem because it requires simultaneous reasoning about continuous state evolution and discrete mode switching. In this work, we address this problem by extending classical Hamilton-Jacobi (HJ) reachability analysis, a formal verification method for continuous-time nonlinear dynamical systems, to hybrid dynamical systems. We characterize the reachable sets for hybrid systems through a generalized value function defined over discrete and continuous states of the hybrid system. We also provide a numerical algorithm to compute this value function and obtain the reachable set. Our framework can compute reachable sets for hybrid systems consisting of multiple discrete modes, each with its own set of nonlinear continuous dynamics, discrete transitions that can be directly commanded or forced by a discrete control input, while still accounting for control bounds and adversarial disturbances in the state evolution. Along with the reachable set, the proposed framework also provides an optimal continuous and discrete controller to ensure system safety.
+										</p>
+										<a href="https://www.roboticsproceedings.org/rss20/p006.pdf">[Paper]</a> <a href="https://github.com/JavierBorquez/hj_hybrid_reachability">[Code] <a href="https://javierborquez.github.io/HybridReachability/">[Website]</a>
+									</span>
+								</div>
+
+								<h2 id="content"> Cooptimizing Safety and Performance with a Control-Constrained Formulation</h2>
+								<div id="banner" class="content">
+									<div class="image26 object">
+										<img src="../images/research_images/coop_safe_perf.png" style="height: 200px; width: auto" alt="">
+									</div>
+									<span class="content">
+										<p>
+											Autonomous systems have witnessed a rapid increase in their capabilities, but it remains a challenge for them to perform tasks both effectively and safely. The fact that performance and safety can sometimes be competing objectives renders the cooptimization between them difficult. One school of thought is to treat this cooptimization as a constrained optimal control problem with a performance-oriented objective function and safety as a constraint. However, solving this constrained optimal control problem for general nonlinear systems remains challenging. In this work, we use the general framework of constrained optimal control, but given the safety state constraint, we convert it into an equivalent control constraint, resulting in a state and time-dependent control-constrained optimal control problem. This equivalent optimal control problem can readily be solved using the dynamic programming principle. We show the corresponding value function is a viscosity solution of a certain Hamilton-Jacobi-Bellman Partial Differential Equation (HJB-PDE). 
+										</p>
+										<a href="https://arxiv.org/abs/2409.06696">[Paper]</a> <a href="https://github.com/haowwang/cooptimize_safety_performance">[Code]
+									</span>
+								</div>
+								
+								<h2 id="content"> On safety and liveness filtering using hamilton-jacobi reachability analysis</h2>
+								<div id="banner" class="content">
+									<div class="image26 object">
+										<img src="../images/research_images/safety_filtering.png" style="height: 200px; width: auto" alt="">
+									</div>
+									<span class="content">
+										<p>
+											Hamilton-Jacobi (HJ) reachability-based filtering provides a powerful framework to co-optimize performance and safety (or liveness) for autonomous systems. Under this filtering scheme, a nominal controller is minimally modified to ensure system safety or liveness. However, the resulting controllers can exhibit abrupt switching and bang-bang behavior, which is not suitable for applications of autonomous systems in the real world. This work presents a novel, unifying framework to design safety and liveness filters through reachability analysis. We explicitly characterize the maximal set of control inputs that ensures safety (or liveness) at a given state. Different safety filters can then be constructed using different subsets of this maximal set along with a projection operator to modify the nominal controller. We use the proposed framework to design three safety filters, each balancing performance, computation time, and smoothness differently. The proposed filters can easily handle dynamics uncertainties, disturbances, and bounded control inputs. We highlight their relative strengths and limitations by applying these filters to autonomous navigation and rocket landing scenarios and on a physical robot testbed. We also discuss practical aspects associated with implementing these filters on real-world autonomous systems. Our research advances the understanding and potential application of reachability-based controllers on real-world autonomous systems.
+										</p>
+										<a href="https://arxiv.org/pdf/2312.15347">[Paper]</a> 
+									</span>
+								</div>
+
+								<h2 id="content"> Verification of Neural Reachable Tubes</h2>
+								<div id="banner" class="content">
+									<div class="image26 object">
+										<img src="../images/research_images/verification.png" style="height: 200px; width: auto" alt="">
+									</div>
+									<span class="content">
+										<p>
+											Learning-based approaches, such as DeepReach, have been used to synthesize reachable tubes and safety controllers for high-dimensional systems. However, verifying these neural reachable tubes remains challenging. In this project, we propose two verification methods, based on robust scenario optimization and conformal prediction, to provide probabilistic safety guarantees for neural reachable tubes. Our methods allow a direct trade-off between resilience to outlier errors in the neural tube, which are inevitable in a learning-based approach, and the strength of the probabilistic safety guarantee. Furthermore, we show that split conformal prediction, a widely used method in the machine learning community for uncertainty quantification, reduces to a scenario-based approach, making the two methods equivalent not only for verification of neural reachable tubes but also more generally. To our knowledge, our proof is the first to reveal a strong relationship between conformal prediction and scenario optimization. Finally, we propose an outlier-adjusted verification approach that uses the error distribution in neural reachable tubes to recover greater safe volumes. We demonstrate the efficacy of the proposed approaches for the high-dimensional problems of multi-vehicle collision avoidance and rocket landing with no-go zones.
+										</p>
+										<a href="https://arxiv.org/pdf/2312.15347">[Paper]</a>  <a href="https://sia-lab-git.github.io/Verification_of_Neural_Reachable_Tubes/">[Website]</a>
+									</span>
+								</div>
 
 								<h2 id="content"> DeepReach: A Deep Learning Approach to High-Dimensional Reachability</h2>
 								<div id="banner" class="content">

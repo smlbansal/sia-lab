@@ -45,6 +45,71 @@
 									<p> Modern autonomous systems often rely on machine learning to operate intelligently in uncertain or a priori unknown environments, making it even trickier to obtain robust safety assurances outside of the training regime. In this research thrust, we focus on understanding how a robot can safely learn in such settings, adapt its safety assurances during operation time in light of system or environment evolution, and continuously improve the learning components to new risks and safety hazards. </p>
 
 									<!-- Content -->
+									<h2 id="content"> Safety Guided Imitation Learning </h2>
+									<div id="banner" class="content">
+										<div class="image26 object">
+											<img src="../images/research_images/safegil_cover.jpg" style="height: 300px; width: auto" alt="">
+										</div>
+										<span class="content">
+											<p>
+												Behavior cloning (BC) is a widely-used approach in imitation learning, where a robot learns a control policy by observing an expert supervisor. However, the learned policy can make errors and might lead to safety violations, which limits their utility in safety-critical robotics applications. While prior works have tried improving a BC policy via additional real or synthetic action labels, adversarial training, or runtime filtering, none of them explicitly focus on reducing the BC policy's safety violations during training time. We propose SAFE-GIL, a design-time method to learn safety-aware behavior cloning policies. SAFE-GIL deliberately injects adversarial disturbance in the system during data collection to guide the expert towards safety-critical states. This disturbance injection simulates potential policy errors that the system might encounter during the test time. By ensuring that training more closely replicates expert behavior in safety-critical states, our approach results in safer policies despite policy errors during the test time. We further develop a reachability-based method to compute this adversarial disturbance. Our method demonstrates a significant reduction in safety failures, particularly in low data regimes where the likelihood of learning errors, and therefore safety violations, is higher.
+											</p>
+											<a href="https://arxiv.org/abs/2404.05249">[Paper]</a> <a href="https://y-u-c.github.io/safegil/">[Project Website]</a>
+										</span>
+									</div> 
+
+									<h2 id="content"> Controlling Covariate Shift with Stable Behavior Cloning</h2>
+									<div id="banner" class="content">
+										<div class="image26 object">
+											<img src="../images/research_images/stable_bc.jpg" style="height: 250px; width: auto" alt="">
+										</div>
+										<span class="content">
+											<p>
+												Behavior cloning is a common imitation learning paradigm. Under behavior cloning, the robot collects expert demonstrations and then trains a policy to match the actions taken by the expert. This works well when the robot learner visits states where the expert has already demonstrated the correct action, but inevitably the robot will also encounter new states outside of its training dataset. If the robot learner takes the wrong action at these new states it could move farther from the training data, which in turn leads to increasingly incorrect actions and compounding errors. Existing works try to address this fundamental challenge by augmenting or enhancing the training data. By contrast, in this project, we develop the control theoretic properties of behavior cloned policies. Specifically, we consider the error dynamics between the system's current state and the states in the expert dataset. From the error dynamics, we derive model-based and model-free conditions for stability: under these conditions, the robot shapes its policy so that its current behavior converges towards example behaviors in the expert dataset. In practice, this results in Stable-BC, an easy-to-implement extension of standard behavior cloning that is provably robust to covariate shift.
+											</p>
+											<a href="https://arxiv.org/abs/2408.06246">[Paper]</a> <a href="https://github.com/VT-Collab/Stable-BC">[Code]</a><a href="https://collab.me.vt.edu/Stable-BC/">[Project Website]</a> <a href="https://www.youtube.com/watch?v=ZC3BjY1k18w">[Video]</a>
+										</span>
+									</div> 
+
+									<h2 id="content"> Learning Robot Safety Representations from Natural Language Feedback</h2>
+									<div id="banner" class="content">
+										<div class="image26 object">
+											<img src="../images/research_images/language_safety_project.png" style="height: 250px; width: auto" alt="">
+										</div>
+										<span class="content">
+											<p>
+												Current safe control approaches typically assume that the safety constraints are known a priori, and thus, the robot can pre-compute a corresponding safety controller. While this may make sense for some safety constraints (e.g., avoiding collision with walls by analyzing a floor plan), other constraints are more complex (e.g., spills), inherently personal, context-dependent, and can only be identified at deployment time when the robot is interacting in a specific environment and with a specific person (e.g., fragile objects, expensive rugs). Language can provide a flexible mechanism to communicate these evolving safety constraints to the robot. In this work, we use vision language models (VLMs) to interpret language feedback and the robot’s image observations to continuously update the robot’s representation of safety constraints. With these inferred constraints, we update a Hamilton-Jacobi reachability safety controller online via efficient warm-starting techniques. Through simulation and hardware experiments, we demonstrate the robot’s ability to infer and respect language-based safety constraints with the proposed approach.
+											</p>
+											<a href="https://arxiv.org/pdf/2409.14580">[Paper]</a> <a href="https://github.com/cmu-intentlab/language-informed-safe-navigation">[Code]</a><a href="https://cmu-intentlab.github.io/language-informed-safe-navigation/">[Project Website]</a>
+										</span>
+									</div> 
+
+									<h2 id="content"> Enhancing Safety and Robustness of Vision-Based Controllers via Reachability Analysis</h2>
+									<div id="banner" class="content">
+										<div class="image26 object">
+											<img src="../images/research_images/failure_detection_mitigation.png" style="height: 250px; width: auto" alt="">
+										</div>
+										<span class="content">
+											<p>
+												Autonomous systems leveraging visual inputs and machine learning for decision-making and control have made significant strides in recent years. Despite their impressive performance, these vision-based controllers can make erroneous predictions when faced with novel or out-of-distribution inputs. Such errors can cascade into catastrophic system failures and compromise system safety. In this project, we compute Neural Reachable Tubes, a parameterized approximation of Backward Reachable Tubes to stress-test the vision-based controllers and mine their failure modes. The identified failures are then used to enhance the system safety through both offline and online methods. The online approach involves training a classifier as a run-time failure monitor to detect closed-loop, system-level failures, subsequently triggering a fallback controller that robustly handles these detected failures to preserve system safety. For the offline approach, we improve the original controller via incremental training using a carefully augmented failure dataset, resulting in a more robust controller resistant to the known failure modes. In either approach, the system is safeguarded against shortcomings that transcend the vision-based controller and pertain to overall system safety. We validate the proposed approaches on an autonomous aircraft taxiing task that involves using a vision-based controller to guide the aircraft towards the centerline of the runway.
+											</p>
+											<a href="https://arxiv.org/abs/2410.21736">[Paper1]</a> <a href="https://arxiv.org/abs/2309.13475">[Paper2]</a> <a href="https://github.com/sia-lab-git/visual_failure_mitigation">[Code]</a> <a href="https://vatsuak.github.io/visual-failure-mitigation/">[Project Website]</a> 
+										</span>
+									</div> 
+
+									<h2 id="content"> System-Level Safety Monitoring and Recovery for Perception Failures in Autonomous Vehicles </h2>
+									<div id="banner" class="content">
+										<div class="image26 object">
+											<img src="../images/research_images/SPARQ_image.png" style="height: 250px; width: auto" alt="">
+										</div>
+										<span class="content">
+											<p>
+												The safety-critical nature of autonomous vehicle (AV) operation necessitates development of task-relevant algorithms that can reason about safety at the system level and not just at the component level. To reason about the impact of a perception failure on the entire system performance, such task-relevant algorithms must contend with various challenges: the complexity of AV stacks, high uncertainty in the operating environments, and the need for real-time performance. To overcome these challenges, in this project, we introduce a Qnetwork called SPARQ (abbreviation for Safety evaluation for Perception And Recovery Q-network) that evaluates the safety of a plan generated by a planning algorithm, accounting for perception failures that the planning process may have overlooked. This Q-network can be queried during system runtime to assess whether a proposed plan is safe for execution or poses potential safety risks. If a violation is detected, the network can then recommend a corrective plan while accounting for the perceptual failure. We validate our algorithm using the NuPlanVegas dataset, demonstrating its ability to handle cases where a perception failure compromises a proposed plan while the corrective plan remains safe. We observe an overall accuracy and recall of 90% while sustaining a frequency of 42Hz on the unseen testing dataset. We compare our performance to a popular reachability-based baseline and analyze some interesting properties of our approach in improving the safety properties of an AV pipeline.
+											</p>
+											<a href="https://arxiv.org/abs/2409.17630">[Paper]</a> <a href="https://vatsuak.github.io/sparq/">[Project Website]</a> 
+										</span>
+									</div> 
+
 									<h2 id="content"> Discovering Closed-Loop Failures of Vision-Based Controllers via Reachability Analysis </h2>
 									<div id="banner" class="content">
 										<div class="image26 object">
