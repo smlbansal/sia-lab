@@ -24,7 +24,15 @@
 		</script>
 	</head>
 	<body class="is-preload">
-
+		<style type="text/css">
+			.tg  {border-collapse:collapse;border-spacing:0;}
+			.tg td{border-color:black;border-style:none;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+				overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg th{border-color:black;border-style:none;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+				font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+			.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+		</style>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -48,7 +56,7 @@
 									<h2 id="content"> Safety Guided Imitation Learning </h2>
 									<div id="banner" class="content">
 										<div class="image26 object">
-											<img src="../images/research_images/safegil_cover.jpg" style="height: 300px; width: auto" alt="">
+											<img src="../images/research_images/safegil_cover.jpg" style="height: auto; width: 550px" alt="">
 										</div>
 										<span class="content">
 											<p>
@@ -58,10 +66,27 @@
 										</span>
 									</div> 
 
+									<!-- <table class="tg"><thead>
+										<tr>
+											<th class="tg-0pky" rowspan="2"><img src="../images/research_images/safegil_cover.jpg" style="height: auto; width:500px" alt=""></th>
+											<th class="tg-0pky"><h2 id="content"> Safety Guided Imitation Learning</h2></th>
+										</tr>
+										<tr>
+											<th class="tg-0pky"><a href="https://arxiv.org/abs/2404.05249">[Paper]</a> <a href="https://y-u-c.github.io/safegil/">[Project Website]</a></th>
+										</tr></thead>
+									<tbody>
+										<tr>
+											<td class="tg-0pky" colspan="2"><p>
+												Behavior cloning (BC) is a widely-used approach in imitation learning, where a robot learns a control policy by observing an expert supervisor. However, the learned policy can make errors and might lead to safety violations, which limits their utility in safety-critical robotics applications. While prior works have tried improving a BC policy via additional real or synthetic action labels, adversarial training, or runtime filtering, none of them explicitly focus on reducing the BC policy's safety violations during training time. We propose SAFE-GIL, a design-time method to learn safety-aware behavior cloning policies. SAFE-GIL deliberately injects adversarial disturbance in the system during data collection to guide the expert towards safety-critical states. This disturbance injection simulates potential policy errors that the system might encounter during the test time. By ensuring that training more closely replicates expert behavior in safety-critical states, our approach results in safer policies despite policy errors during the test time. We further develop a reachability-based method to compute this adversarial disturbance. Our method demonstrates a significant reduction in safety failures, particularly in low data regimes where the likelihood of learning errors, and therefore safety violations, is higher.
+											</p></td>
+										</tr>
+									</tbody>
+									</table> -->
+
 									<h2 id="content"> Controlling Covariate Shift with Stable Behavior Cloning</h2>
 									<div id="banner" class="content">
 										<div class="image26 object">
-											<img src="../images/research_images/stable_bc.jpg" style="height: 250px; width: auto" alt="">
+											<img src="../images/research_images/stable_bc.jpg" style="height: auto; width: 550px" alt="">
 										</div>
 										<span class="content">
 											<p>
@@ -74,20 +99,37 @@
 									<h2 id="content"> Learning Robot Safety Representations from Natural Language Feedback</h2>
 									<div id="banner" class="content">
 										<div class="image26 object">
-											<img src="../images/research_images/language_safety_project.png" style="height: 250px; width: auto" alt="">
+											<img src="../images/research_images/language_safety_project.png" style="height: auto; width: 550px" alt="">
 										</div>
 										<span class="content">
 											<p>
-												Current safe control approaches typically assume that the safety constraints are known a priori, and thus, the robot can pre-compute a corresponding safety controller. While this may make sense for some safety constraints (e.g., avoiding collision with walls by analyzing a floor plan), other constraints are more complex (e.g., spills), inherently personal, context-dependent, and can only be identified at deployment time when the robot is interacting in a specific environment and with a specific person (e.g., fragile objects, expensive rugs). Language can provide a flexible mechanism to communicate these evolving safety constraints to the robot. In this work, we use vision language models (VLMs) to interpret language feedback and the robot’s image observations to continuously update the robot’s representation of safety constraints. With these inferred constraints, we update a Hamilton-Jacobi reachability safety controller online via efficient warm-starting techniques. Through simulation and hardware experiments, we demonstrate the robot’s ability to infer and respect language-based safety constraints with the proposed approach.
+												Current safe control approaches typically assume that the safety constraints are known a priori, and thus, the robot can pre-compute a corresponding safety controller. While this may make sense for some safety constraints (e.g., avoiding collision with walls by analyzing a floor plan), other constraints are more complex (e.g., spills), inherently personal, context-dependent, and can only be identified at deployment time when the robot is interacting in a specific environment and with a specific person (e.g., fragile objects, expensive rugs). Language can provide a flexible mechanism to communicate these evolving safety constraints to the robot. In this work, we use vision language models (VLMs) to interpret language feedback and the robot's image observations to continuously update the robot's representation of safety constraints. With these inferred constraints, we update a Hamilton-Jacobi reachability safety controller online via efficient warm-starting techniques. Through simulation and hardware experiments, we demonstrate the robot's ability to infer and respect language-based safety constraints with the proposed approach.
 											</p>
 											<a href="https://arxiv.org/pdf/2409.14580">[Paper]</a> <a href="https://github.com/cmu-intentlab/language-informed-safe-navigation">[Code]</a><a href="https://cmu-intentlab.github.io/language-informed-safe-navigation/">[Project Website]</a>
 										</span>
 									</div> 
 
+									<!-- <table class="tg"><thead>
+										<tr>
+											<th class="tg-0pky" rowspan="2"><img src="../images/research_images/language_safety_project.png" style="height: auto; width: 550px" alt=""></th>
+											<th class="tg-0pky"><h2 id="content"> Learning Robot Safety Representations from Natural Language Feedback</h2></th>
+										</tr>
+										<tr>
+											<th class="tg-0pky"><a href="https://arxiv.org/pdf/2409.14580">[Paper]</a> <a href="https://github.com/cmu-intentlab/language-informed-safe-navigation">[Code]</a><a href="https://cmu-intentlab.github.io/language-informed-safe-navigation/">[Project Website]</a></th>
+										</tr></thead>
+									<tbody>
+										<tr>
+											<td class="tg-0pky" colspan="2"><p>
+												Current safe control approaches typically assume that the safety constraints are known a priori, and thus, the robot can pre-compute a corresponding safety controller. While this may make sense for some safety constraints (e.g., avoiding collision with walls by analyzing a floor plan), other constraints are more complex (e.g., spills), inherently personal, context-dependent, and can only be identified at deployment time when the robot is interacting in a specific environment and with a specific person (e.g., fragile objects, expensive rugs). Language can provide a flexible mechanism to communicate these evolving safety constraints to the robot. In this work, we use vision language models (VLMs) to interpret language feedback and the robot's image observations to continuously update the robot's representation of safety constraints. With these inferred constraints, we update a Hamilton-Jacobi reachability safety controller online via efficient warm-starting techniques. Through simulation and hardware experiments, we demonstrate the robot's ability to infer and respect language-based safety constraints with the proposed approach.
+											</p></td>
+										</tr>
+									</tbody>
+									</table> -->
+
 									<h2 id="content"> Enhancing Safety and Robustness of Vision-Based Controllers via Reachability Analysis</h2>
 									<div id="banner" class="content">
 										<div class="image26 object">
-											<img src="../images/research_images/failure_detection_mitigation.png" style="height: 250px; width: auto" alt="">
+											<img src="../images/research_images/failure_detection_mitigation.png" style="height: auto; width: 550px" alt="">
 										</div>
 										<span class="content">
 											<p>
@@ -100,7 +142,7 @@
 									<h2 id="content"> System-Level Safety Monitoring and Recovery for Perception Failures in Autonomous Vehicles </h2>
 									<div id="banner" class="content">
 										<div class="image26 object">
-											<img src="../images/research_images/SPARQ_image.png" style="height: 250px; width: auto" alt="">
+											<img src="../images/research_images/SPARQ_image.png" style="height: auto; width: 550px" alt="">
 										</div>
 										<span class="content">
 											<p>
@@ -113,7 +155,7 @@
 									<h2 id="content"> Discovering Closed-Loop Failures of Vision-Based Controllers via Reachability Analysis </h2>
 									<div id="banner" class="content">
 										<div class="image26 object">
-											<img src="../images/research_images/closed-loop_failures_of_vision-based_controllers_research_page.jpg" style="height: 250px; width: auto" alt="">
+											<img src="../images/research_images/closed-loop_failures_of_vision-based_controllers_research_page.jpg" style="height: auto; width: 550px" alt="">
 										</div>
 										<span class="content">
 											<p>
@@ -130,7 +172,7 @@
 									<h2 id="content"> Online Update of Safety Assurances for a Reliable Human-Robot Interaction</h2>
 									<div id="banner" class="content">
 										<div class="image26 object">
-											<img src="../images/research_images/safe_hri.gif" style="height: 250px; width: auto" alt="">
+											<img src="../images/research_images/safe_hri.gif" style="height: auto; width: 550px" alt="">
 										</div>
 										<span class="content">
 											<p>
@@ -143,7 +185,7 @@
 									<h2 id="content"> An Efficient Reachability-Based Framework for Provably Safe Autonomous Navigation in Unknown Environments</h2>
 									<div id="banner" class="content">
 										<div class="image26 object">
-											<img src="../images/research_images/turtlebot_office.gif" style="height: 225px; width: auto" alt="">
+											<img src="../images/research_images/turtlebot_office.gif" style="height: auto; width: 550px" alt="">
 										</div>
 										<span class="content">
 											<p>
@@ -157,7 +199,7 @@
                                     <h2 id="content"> Combining Optimal Control and Learning for Visual Navigation in Novel Environments</h2>
                                     <div id="banner" class="content">
                                         <div class="image26 object">
-                                            <img src="../images/research_images/visnav2.gif" style="height: 225px; width: auto" alt="">
+                                            <img src="../images/research_images/visnav2.gif" style="height: auto; width: 550px" alt="">
                                         </div>
                                         <span class="content">
                                             <p>
@@ -170,7 +212,7 @@
                                     <h2 id="content"> Visual Navigation Among Humans With Optimal Control as a Supervisor</h2>
                                     <div id="banner" class="content">
                                         <div class="image26 object">
-                                            <img src="../images/research_images/humanav.gif" style="height: 225px; width: auto" alt="">
+                                            <img src="../images/research_images/humanav.gif" style="height: auto; width: 550px" alt="">
                                         </div>
                                         <span class="content">
                                             <p>

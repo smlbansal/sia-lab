@@ -25,6 +25,16 @@
 	</head>
 	<body class="is-preload">
 
+		<style type="text/css">
+			.tg  {border-collapse:collapse;border-spacing:0;}
+			.tg td{border-color:black;border-style:none;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+				overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg th{border-color:black;border-style:none;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+				font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+			.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+		</style>
+		
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -48,7 +58,7 @@
 								<h2 id="content"> Reachability Analysis for Black-Box Dynamical Systems</h2>
 								<div id="banner" class="content">
 									<div class="image26 object">
-										<img src="../images/research_images/blackbox_reachability.png" style="height: 200px; width: auto" alt="">
+										<img src="../images/research_images/blackbox_reachability.png" style="height: auto; width: 550px" alt="">
 									</div>
 									<span class="content">
 										<p>
@@ -61,7 +71,7 @@
 								<h2 id="content"> Providing Safety Assurances for Systems with Unknown Dynamics</h2>
 								<div id="banner" class="content">
 									<div class="image26 object">
-										<img src="../images/research_images/safe_assurances_tbot.gif" style="height: 200px; width: auto" alt="">
+										<img src="../images/research_images/safe_assurances_tbot.gif" style="height: auto; width: 550px" alt="">
 									</div>
 									<span class="content">
 										<p>
@@ -73,12 +83,11 @@
 
 								<h2 id="content"> Hamilton-Jacobi Reachability Analysis for Hybrid Systems with Controlled and Forced Transitions</h2>
 								<div id="banner" class="content">
-									<video width="500" height="300" controls="controls" poster="image" preload="true">
-										<source src="../images/research_images/hybrid_reach_quadruped.mp4" type="video/mp4" style="height: 150px; width: auto">
+									<div class="image26 object">
+									<video width="550" height="auto" controls="controls" poster="image" preload="true">
+										<source src="../images/research_images/hybrid_reach_quadruped.mp4" type="video/mp4" style="height: auto; width: 550px">
 									</video>
-									<!-- <div class="image26 object">
-										<video src="../images/research_images/hybrid_reach_quadruped.mp4" type="video/mp4" style="height: 200px; width: autoplay">
-									</div> -->
+								</div>
 									<span class="content">
 										<p>
 											Hybrid dynamical systems with nonlinear dynamics are one of the most general modeling tools for representing robotic systems, especially contact-rich systems. However, providing guarantees regarding the safety or performance of nonlinear hybrid systems remains a challenging problem because it requires simultaneous reasoning about continuous state evolution and discrete mode switching. In this work, we address this problem by extending classical Hamilton-Jacobi (HJ) reachability analysis, a formal verification method for continuous-time nonlinear dynamical systems, to hybrid dynamical systems. We characterize the reachable sets for hybrid systems through a generalized value function defined over discrete and continuous states of the hybrid system. We also provide a numerical algorithm to compute this value function and obtain the reachable set. Our framework can compute reachable sets for hybrid systems consisting of multiple discrete modes, each with its own set of nonlinear continuous dynamics, discrete transitions that can be directly commanded or forced by a discrete control input, while still accounting for control bounds and adversarial disturbances in the state evolution. Along with the reachable set, the proposed framework also provides an optimal continuous and discrete controller to ensure system safety.
@@ -90,20 +99,20 @@
 								<h2 id="content"> Cooptimizing Safety and Performance with a Control-Constrained Formulation</h2>
 								<div id="banner" class="content">
 									<div class="image26 object">
-										<img src="../images/research_images/coop_safe_perf.png" style="height: 200px; width: auto" alt="">
+										<img src="../images/research_images/coop_safe_perf.png" style="height: auto; width: 550px" alt="">
 									</div>
 									<span class="content">
 										<p>
 											Autonomous systems have witnessed a rapid increase in their capabilities, but it remains a challenge for them to perform tasks both effectively and safely. The fact that performance and safety can sometimes be competing objectives renders the cooptimization between them difficult. One school of thought is to treat this cooptimization as a constrained optimal control problem with a performance-oriented objective function and safety as a constraint. However, solving this constrained optimal control problem for general nonlinear systems remains challenging. In this work, we use the general framework of constrained optimal control, but given the safety state constraint, we convert it into an equivalent control constraint, resulting in a state and time-dependent control-constrained optimal control problem. This equivalent optimal control problem can readily be solved using the dynamic programming principle. We show the corresponding value function is a viscosity solution of a certain Hamilton-Jacobi-Bellman Partial Differential Equation (HJB-PDE). 
 										</p>
-										<a href="https://arxiv.org/abs/2409.06696">[Paper]</a> <a href="https://github.com/haowwang/cooptimize_safety_performance">[Code]
+										<a href="https://arxiv.org/abs/2409.06696">[Paper]</a> <a href="https://github.com/haowwang/cooptimize_safety_performance">[Code]</a>
 									</span>
 								</div>
-								
-								<h2 id="content"> On safety and liveness filtering using hamilton-jacobi reachability analysis</h2>
+		
+								<h2 id="content"> On Safety and Liveness Filtering using Hamilton-Jacobi Reachability Analysis</h2>
 								<div id="banner" class="content">
 									<div class="image26 object">
-										<img src="../images/research_images/safety_filtering.png" style="height: 200px; width: auto" alt="">
+										<img src="../images/research_images/safety_filtering.png" style="height: auto; width: 550px" alt="">
 									</div>
 									<span class="content">
 										<p>
@@ -116,7 +125,7 @@
 								<h2 id="content"> Verification of Neural Reachable Tubes</h2>
 								<div id="banner" class="content">
 									<div class="image26 object">
-										<img src="../images/research_images/verification.png" style="height: 200px; width: auto" alt="">
+										<img src="../images/research_images/verification.png" style="height: auto; width: 550px" alt="">
 									</div>
 									<span class="content">
 										<p>
@@ -126,10 +135,27 @@
 									</span>
 								</div>
 
+								<!-- <table class="tg"><thead>
+									<tr>
+										<th class="tg-0pky" rowspan="2"><img src="../images/research_images/verification.png" style="height: auto; width:400px" alt=""></th>
+										<th class="tg-0pky"><h2 id="content"> Verification of Neural Reachable Tubes</h2></th>
+									</tr>
+									<tr>
+										<th class="tg-0pky"><a href="https://arxiv.org/pdf/2312.15347">[Paper]</a>  <a href="https://sia-lab-git.github.io/Verification_of_Neural_Reachable_Tubes/">[Website]</a></th>
+									</tr></thead>
+								<tbody>
+									<tr>
+										<td class="tg-0pky" colspan="2"><p>
+											Learning-based approaches, such as DeepReach, have been used to synthesize reachable tubes and safety controllers for high-dimensional systems. However, verifying these neural reachable tubes remains challenging. In this project, we propose two verification methods, based on robust scenario optimization and conformal prediction, to provide probabilistic safety guarantees for neural reachable tubes. Our methods allow a direct trade-off between resilience to outlier errors in the neural tube, which are inevitable in a learning-based approach, and the strength of the probabilistic safety guarantee. Furthermore, we show that split conformal prediction, a widely used method in the machine learning community for uncertainty quantification, reduces to a scenario-based approach, making the two methods equivalent not only for verification of neural reachable tubes but also more generally. To our knowledge, our proof is the first to reveal a strong relationship between conformal prediction and scenario optimization. Finally, we propose an outlier-adjusted verification approach that uses the error distribution in neural reachable tubes to recover greater safe volumes. We demonstrate the efficacy of the proposed approaches for the high-dimensional problems of multi-vehicle collision avoidance and rocket landing with no-go zones.
+										</p></td>
+									</tr>
+								</tbody>
+								</table> -->
+
 								<h2 id="content"> DeepReach: A Deep Learning Approach to High-Dimensional Reachability</h2>
 								<div id="banner" class="content">
 									<div class="image26 object">
-										<img src="../images/research_images/deepreach.png" style="height: 200px; width: auto" alt="">
+										<img src="../images/research_images/deepreach.png" style="height: auto; width: 550px" alt="">
 									</div>
 									<span class="content">
 										<p>
@@ -142,10 +168,10 @@
 								<h2 id="content"> Parameter-Conditioned Reachable Sets for Updating Safety Assurances Online</h2>
 									<div id="banner" class="content">
 										<div class="image26 object">
-											<img src="../images/research_images/rocket_landing.gif" style="height: 200px; width: auto" alt="">
+											<img src="../images/research_images/rocket_landing.gif" style="height: auto; width: 265px" alt="">
 										</div>
 										<div class="image26 object">
-											<img src="../images/research_images/rocket_trajectory.png" style="height: 150px; width: auto" alt="">
+											<img src="../images/research_images/rocket_trajectory.png" style="height: auto; width: 245px" alt="">
 										</div>
 										<span class="content">
 											<p>
@@ -159,7 +185,7 @@
 								<h2 id="content"> Computing Contact-Aware Stabilizing Controllers for Legged Robots Using Reachability Analysis</h2>
 								<div id="banner" class="content">
 									<div class="image26 object">
-										<img src="../images/research_images/sim_and_phase_case1_opt_ctrl.gif" style="height: 300px; width: 500px" alt="">
+										<img src="../images/research_images/sim_and_phase_case1_opt_ctrl.gif" style="height: auto; width: 550px" alt="">
 									</div>
 									<span class="content">
 										<p>
@@ -172,7 +198,7 @@
 								<h2 id="content"> Hamilton-Jacobi Reachability: A Brief Overview and Recent Advances</h2>
 								<div id="banner" class="content">
 									<div class="image26 object">
-										<img src="../images/research_images/hj_torial.png" style="height: 200px; width: auto" alt="">
+										<img src="../images/research_images/hj_torial.png" style="height: auto; width: 550px" alt="">
 									</div>
 									<span class="content">
 										<p>
