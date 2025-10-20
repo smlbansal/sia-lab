@@ -42,7 +42,7 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="../index.html" class="logo">AI-Safety for Robotics</a>
+									<a href="../index.html" class="logo">Safety for AI Systems</a>
 									<ul class="icons">
 										<li><a href="https://github.com/sia-lab-git" class="icon brands fa-github"><span class="label">Medium</span></a></li>
 									</ul>
@@ -50,179 +50,24 @@
 
 							<!-- Content -->
 								<section>
-									<p> Generative AI tools such as Large language models (LLMs) and diffusion models are now ubiquitous in everyday life, raising urgent safety concerns about their tendency to generate harmful content. In this research thrust, we focus on developing control-theoretic algorithms to monitor the safety during inference and steer them to generate safer outputs while not comprimising their performance.</p>
-									<p> Modern autonomous systems often rely on machine learning to operate intelligently in uncertain or a priori unknown environments, making it even trickier to obtain robust safety assurances outside of the training regime. In this research thrust, we focus on understanding how a robot can safely learn in such settings, adapt its safety assurances during operation time in light of system or environment evolution, and continuously improve the learning components to new risks and safety hazards. </p>
+									<p> Generative AI tools such as large language models (LLMs) and diffusion models have become ubiquitous in everyday life, raising urgent safety concerns due to their potential to generate harmful content. In this research thrust, we develop control-theoretic algorithms that monitor safety during inference and steer these models toward producing safer outputs without compromising their performance.</p>
+									
 
 									<!-- Content -->
-									<h2 id="content"> Safety Guided Imitation Learning </h2>
+									<h2 id="content"> Preemptive Detection and Steering of LLM Misalignment via Latent Reachability </h2>
 									<div id="banner" class="content">
 										<div class="image26 object">
-											<img src="../images/research_images/safegil_cover.jpg" style="height: auto; width: 550px" alt="">
+											<img src="../images/paper_images/llm_safety_sathwik.png" style="height: auto; width: 550px" alt="">
 										</div>
 										<span class="content">
 											<p>
-												Behavior cloning (BC) is a widely-used approach in imitation learning, where a robot learns a control policy by observing an expert supervisor. However, the learned policy can make errors and might lead to safety violations, which limits their utility in safety-critical robotics applications. While prior works have tried improving a BC policy via additional real or synthetic action labels, adversarial training, or runtime filtering, none of them explicitly focus on reducing the BC policy's safety violations during training time. We propose SAFE-GIL, a design-time method to learn safety-aware behavior cloning policies. SAFE-GIL deliberately injects adversarial disturbance in the system during data collection to guide the expert towards safety-critical states. This disturbance injection simulates potential policy errors that the system might encounter during the test time. By ensuring that training more closely replicates expert behavior in safety-critical states, our approach results in safer policies despite policy errors during the test time. We further develop a reachability-based method to compute this adversarial disturbance. Our method demonstrates a significant reduction in safety failures, particularly in low data regimes where the likelihood of learning errors, and therefore safety violations, is higher.
+												 Large language models (LLMs) are now ubiquitous in everyday tools, raising urgent safety concerns about their tendency to generate harmful content. The dominant safety approach-reinforcement learning from human feedback (RLHF) effectively shapes model behavior during training but offers no safeguards at inference time, where unsafe continuations may still arise. We propose BRT-ALIGN, a reachability-based framework that brings control-theoretic safety tools to LLM inference. BRT-ALIGN models autoregressive generation as a dynamical system in latent space and learn a safety value function via backward reachability, estimating the worst-case evolution of a trajectory. This enables two complementary mechanisms: (1) a runtime monitor that forecasts unsafe completions several tokens in advance, and (2) a least-restrictive steering filter that minimally perturbs latent states to redirect generation away from unsafe regions. Experiments across multiple LLMs and toxicity benchmarks demonstrate that BRT-ALIGN provides more accurate and earlier detection of unsafe continuations than baselines. Moreover, for LLM safety alignment, BRT-ALIGN substantially reduces unsafe generations while preserving sentence diversity and coherence. Qualitative results further highlight emergent alignment properties: BRT-ALIGN consistently produces responses that are less violent, less profane, less offensive, and less politically biased. Together, these findings demonstrate that reachability analysis provides a principled and practical foundation for inference-time LLM safety.
 											</p>
-											<a href="https://arxiv.org/abs/2404.05249">[Paper]</a> <a href="https://y-u-c.github.io/safegil/">[Project Website]</a>
+											<a href="https://arxiv.org/pdf/2509.21528?">[Paper]</a> 
 										</span>
 									</div> 
 
-									<!-- <table class="tg"><thead>
-										<tr>
-											<th class="tg-0pky" rowspan="2"><img src="../images/research_images/safegil_cover.jpg" style="height: auto; width:500px" alt=""></th>
-											<th class="tg-0pky"><h2 id="content"> Safety Guided Imitation Learning</h2></th>
-										</tr>
-										<tr>
-											<th class="tg-0pky"><a href="https://arxiv.org/abs/2404.05249">[Paper]</a> <a href="https://y-u-c.github.io/safegil/">[Project Website]</a></th>
-										</tr></thead>
-									<tbody>
-										<tr>
-											<td class="tg-0pky" colspan="2"><p>
-												Behavior cloning (BC) is a widely-used approach in imitation learning, where a robot learns a control policy by observing an expert supervisor. However, the learned policy can make errors and might lead to safety violations, which limits their utility in safety-critical robotics applications. While prior works have tried improving a BC policy via additional real or synthetic action labels, adversarial training, or runtime filtering, none of them explicitly focus on reducing the BC policy's safety violations during training time. We propose SAFE-GIL, a design-time method to learn safety-aware behavior cloning policies. SAFE-GIL deliberately injects adversarial disturbance in the system during data collection to guide the expert towards safety-critical states. This disturbance injection simulates potential policy errors that the system might encounter during the test time. By ensuring that training more closely replicates expert behavior in safety-critical states, our approach results in safer policies despite policy errors during the test time. We further develop a reachability-based method to compute this adversarial disturbance. Our method demonstrates a significant reduction in safety failures, particularly in low data regimes where the likelihood of learning errors, and therefore safety violations, is higher.
-											</p></td>
-										</tr>
-									</tbody>
-									</table> -->
-
-									<h2 id="content"> Controlling Covariate Shift with Stable Behavior Cloning</h2>
-									<div id="banner" class="content">
-										<div class="image26 object">
-											<img src="../images/research_images/stable_bc.jpg" style="height: auto; width: 550px" alt="">
-										</div>
-										<span class="content">
-											<p>
-												Behavior cloning is a common imitation learning paradigm. Under behavior cloning, the robot collects expert demonstrations and then trains a policy to match the actions taken by the expert. This works well when the robot learner visits states where the expert has already demonstrated the correct action, but inevitably the robot will also encounter new states outside of its training dataset. If the robot learner takes the wrong action at these new states it could move farther from the training data, which in turn leads to increasingly incorrect actions and compounding errors. Existing works try to address this fundamental challenge by augmenting or enhancing the training data. By contrast, in this project, we develop the control theoretic properties of behavior cloned policies. Specifically, we consider the error dynamics between the system's current state and the states in the expert dataset. From the error dynamics, we derive model-based and model-free conditions for stability: under these conditions, the robot shapes its policy so that its current behavior converges towards example behaviors in the expert dataset. In practice, this results in Stable-BC, an easy-to-implement extension of standard behavior cloning that is provably robust to covariate shift.
-											</p>
-											<a href="https://arxiv.org/abs/2408.06246">[Paper]</a> <a href="https://github.com/VT-Collab/Stable-BC">[Code]</a><a href="https://collab.me.vt.edu/Stable-BC/">[Project Website]</a> <a href="https://www.youtube.com/watch?v=ZC3BjY1k18w">[Video]</a>
-										</span>
-									</div> 
-
-									<h2 id="content"> Learning Robot Safety Representations from Natural Language Feedback</h2>
-									<div id="banner" class="content">
-										<div class="image26 object">
-											<img src="../images/research_images/language_safety_project.png" style="height: auto; width: 550px" alt="">
-										</div>
-										<span class="content">
-											<p>
-												Current safe control approaches typically assume that the safety constraints are known a priori, and thus, the robot can pre-compute a corresponding safety controller. While this may make sense for some safety constraints (e.g., avoiding collision with walls by analyzing a floor plan), other constraints are more complex (e.g., spills), inherently personal, context-dependent, and can only be identified at deployment time when the robot is interacting in a specific environment and with a specific person (e.g., fragile objects, expensive rugs). Language can provide a flexible mechanism to communicate these evolving safety constraints to the robot. In this work, we use vision language models (VLMs) to interpret language feedback and the robot's image observations to continuously update the robot's representation of safety constraints. With these inferred constraints, we update a Hamilton-Jacobi reachability safety controller online via efficient warm-starting techniques. Through simulation and hardware experiments, we demonstrate the robot's ability to infer and respect language-based safety constraints with the proposed approach.
-											</p>
-											<a href="https://arxiv.org/pdf/2409.14580">[Paper]</a> <a href="https://github.com/cmu-intentlab/language-informed-safe-navigation">[Code]</a><a href="https://cmu-intentlab.github.io/language-informed-safe-navigation/">[Project Website]</a>
-										</span>
-									</div> 
-
-									<!-- <table class="tg"><thead>
-										<tr>
-											<th class="tg-0pky" rowspan="2"><img src="../images/research_images/language_safety_project.png" style="height: auto; width: 550px" alt=""></th>
-											<th class="tg-0pky"><h2 id="content"> Learning Robot Safety Representations from Natural Language Feedback</h2></th>
-										</tr>
-										<tr>
-											<th class="tg-0pky"><a href="https://arxiv.org/pdf/2409.14580">[Paper]</a> <a href="https://github.com/cmu-intentlab/language-informed-safe-navigation">[Code]</a><a href="https://cmu-intentlab.github.io/language-informed-safe-navigation/">[Project Website]</a></th>
-										</tr></thead>
-									<tbody>
-										<tr>
-											<td class="tg-0pky" colspan="2"><p>
-												Current safe control approaches typically assume that the safety constraints are known a priori, and thus, the robot can pre-compute a corresponding safety controller. While this may make sense for some safety constraints (e.g., avoiding collision with walls by analyzing a floor plan), other constraints are more complex (e.g., spills), inherently personal, context-dependent, and can only be identified at deployment time when the robot is interacting in a specific environment and with a specific person (e.g., fragile objects, expensive rugs). Language can provide a flexible mechanism to communicate these evolving safety constraints to the robot. In this work, we use vision language models (VLMs) to interpret language feedback and the robot's image observations to continuously update the robot's representation of safety constraints. With these inferred constraints, we update a Hamilton-Jacobi reachability safety controller online via efficient warm-starting techniques. Through simulation and hardware experiments, we demonstrate the robot's ability to infer and respect language-based safety constraints with the proposed approach.
-											</p></td>
-										</tr>
-									</tbody>
-									</table> -->
-
-									<h2 id="content"> Enhancing Safety and Robustness of Vision-Based Controllers via Reachability Analysis</h2>
-									<div id="banner" class="content">
-										<div class="image26 object">
-											<img src="../images/research_images/failure_detection_mitigation.png" style="height: auto; width: 550px" alt="">
-										</div>
-										<span class="content">
-											<p>
-												Autonomous systems leveraging visual inputs and machine learning for decision-making and control have made significant strides in recent years. Despite their impressive performance, these vision-based controllers can make erroneous predictions when faced with novel or out-of-distribution inputs. Such errors can cascade into catastrophic system failures and compromise system safety. In this project, we compute Neural Reachable Tubes, a parameterized approximation of Backward Reachable Tubes to stress-test the vision-based controllers and mine their failure modes. The identified failures are then used to enhance the system safety through both offline and online methods. The online approach involves training a classifier as a run-time failure monitor to detect closed-loop, system-level failures, subsequently triggering a fallback controller that robustly handles these detected failures to preserve system safety. For the offline approach, we improve the original controller via incremental training using a carefully augmented failure dataset, resulting in a more robust controller resistant to the known failure modes. In either approach, the system is safeguarded against shortcomings that transcend the vision-based controller and pertain to overall system safety. We validate the proposed approaches on an autonomous aircraft taxiing task that involves using a vision-based controller to guide the aircraft towards the centerline of the runway.
-											</p>
-											<a href="https://arxiv.org/abs/2410.21736">[Paper1]</a> <a href="https://arxiv.org/abs/2309.13475">[Paper2]</a> <a href="https://github.com/sia-lab-git/visual_failure_mitigation">[Code]</a> <a href="https://vatsuak.github.io/visual-failure-mitigation/">[Project Website]</a> 
-										</span>
-									</div> 
-
-									<h2 id="content"> System-Level Safety Monitoring and Recovery for Perception Failures in Autonomous Vehicles </h2>
-									<div id="banner" class="content">
-										<div class="image26 object">
-											<img src="../images/research_images/SPARQ_image.png" style="height: auto; width: 550px" alt="">
-										</div>
-										<span class="content">
-											<p>
-												The safety-critical nature of autonomous vehicle (AV) operation necessitates development of task-relevant algorithms that can reason about safety at the system level and not just at the component level. To reason about the impact of a perception failure on the entire system performance, such task-relevant algorithms must contend with various challenges: the complexity of AV stacks, high uncertainty in the operating environments, and the need for real-time performance. To overcome these challenges, in this project, we introduce a Qnetwork called SPARQ (abbreviation for Safety evaluation for Perception And Recovery Q-network) that evaluates the safety of a plan generated by a planning algorithm, accounting for perception failures that the planning process may have overlooked. This Q-network can be queried during system runtime to assess whether a proposed plan is safe for execution or poses potential safety risks. If a violation is detected, the network can then recommend a corrective plan while accounting for the perceptual failure. We validate our algorithm using the NuPlanVegas dataset, demonstrating its ability to handle cases where a perception failure compromises a proposed plan while the corrective plan remains safe. We observe an overall accuracy and recall of 90% while sustaining a frequency of 42Hz on the unseen testing dataset. We compare our performance to a popular reachability-based baseline and analyze some interesting properties of our approach in improving the safety properties of an AV pipeline.
-											</p>
-											<a href="https://arxiv.org/abs/2409.17630">[Paper]</a> <a href="https://vatsuak.github.io/sparq/">[Project Website]</a> 
-										</span>
-									</div> 
-
-									<h2 id="content"> Discovering Closed-Loop Failures of Vision-Based Controllers via Reachability Analysis </h2>
-									<div id="banner" class="content">
-										<div class="image26 object">
-											<img src="../images/research_images/closed-loop_failures_of_vision-based_controllers_research_page.jpg" style="height: auto; width: 550px" alt="">
-										</div>
-										<span class="content">
-											<p>
-												One of the key reasons for the success of deep learning in robot control is the ability of neural networks to elegantly process rich visual information and output useful information for control. 
-												Unfortunately, vision-based controllers can also be very brittle when faced with out-of-distribution inputs, potentially leading to catastrophic system failures. 
-												In this work, we propose an approach for stress testing these controllers using photorealistic simulators. 
-												We formulate the closed-loop failure discovery as an optimal control problem, which allows us to do a targeted and efficient search for visual inputs that might trigger system failures. 
-												Our findings reveal intriguing and unexpected situations that could compromise state-of-the-art visual controllers, such as pedestrian markings confusing an autonomous aircraft or light-colored walls misleading indoor navigation robots.
-											</p>
-											<a href="https://arxiv.org/pdf/2211.02736.pdf">[Paper]</a> <a href="https://vatsuak.github.io/failure-detection/">[Project Website]</a> <a href="https://youtu.be/lGNjvyfW1mc?si=U0PniXpo8vdWYJdC">[Video]</a>
-										</span>
-									</div> 
-
-									<h2 id="content"> Online Update of Safety Assurances for a Reliable Human-Robot Interaction</h2>
-									<div id="banner" class="content">
-										<div class="image26 object">
-											<img src="../images/research_images/safe_hri.gif" style="height: auto; width: 550px" alt="">
-										</div>
-										<span class="content">
-											<p>
-												Human-robot interactions are an unavoidable aspect of many modern robotic applications and ensuring safety for these interactions is critical. In such scenarios, the robot often leverages a human motion predictor to predict their future states and plan safe and efficient trajectories, includinh high-capacity neural networks that can leverage the scene semantics to predict complex human behaviors. However, no model is ever perfect -- when the observed human behavior deviates from the model predictions, the robot might plan unsafe maneuvers. In this work, we propose a HJ reachability-based approach that maintains a confidence in the human model and automatically adjust the safety assurances online as this confidence changes based on the observed human behavior. Overall, our approach allows us to ensure a safe human-robot interaction even when the human model is incorrect. We demonstrate our approach in several safety-critical autonomous driving scenarios, involving a state-of-the-art deep learning-based prediction model.
-											</p>
-											<a href="https://arxiv.org/pdf/2210.01199.pdf">[Paper]</a>
-										</span>
-									</div> 
-
-									<h2 id="content"> An Efficient Reachability-Based Framework for Provably Safe Autonomous Navigation in Unknown Environments</h2>
-									<div id="banner" class="content">
-										<div class="image26 object">
-											<img src="../images/research_images/turtlebot_office.gif" style="height: auto; width: 550px" alt="">
-										</div>
-										<span class="content">
-											<p>
-												Real-world autonomous vehicles often operate in a priori unknown environments. Since most of these systems are safety-critical, it is important to ensure they operate safely in the face of environment uncertainty, such as unseen obstacles. Current safety analysis tools do not scale well to scenarios where the environment is being sensed in real time, such as during navigation tasks. In this work, we propose a novel, real-time safety analysis method based on Hamilton-Jacobi reachability that provides strong safety guarantees despite environment uncertainty. Our safety method is planner-agnostic and provides guarantees for a variety of mapping sensors. We demonstrate our approach in simulation and in hardware to provide safety guarantees around a state-of-the-art vision-based, learning-based planner.
-
-											</p>
-											<a href="https://arxiv.org/abs/1905.00532">[Paper]</a> <a href="https://smlbansal.github.io/website-safe-navigation/">[Project Website]</a><a href="https://youtu.be/BAm3DJFwHis">[Video]</a>
-										</span>
-									</div> 
-
-                                    <h2 id="content"> Combining Optimal Control and Learning for Visual Navigation in Novel Environments</h2>
-                                    <div id="banner" class="content">
-                                        <div class="image26 object">
-                                            <img src="../images/research_images/visnav2.gif" style="height: auto; width: 550px" alt="">
-                                        </div>
-                                        <span class="content">
-                                            <p>
-                                                Real-world autonomous vehicles often need to navigate in a priori unknown environments. In this work, we propose a modular approach that enables autonomous navigation in unknown enviornments using only the monocular RGB images from an onboard camera. Our approach uses machine learning for high-level planning based on perceptual information; this high-level plan is then used for low-level planning and control via leveraging classical model-based, control-theoretic approaches. This modular policy leads to a significantly better performance in new, unseen buildings compared to pure learning- based approaches. In addition, we demonstrate that a navigation policy encapsulated in this fashion can be transferred from simulation to reality directly with no retraining or finetuning, demonstrating the robust generalization capabilities of the learned policy. Finally, a side advantage of our integrated policy is its significant data efficiency compared to pure learning-based approaches (a 10x improvement in sample complexity!).
-                                            </p>
-                                            <a href="https://arxiv.org/pdf/1903.02531.pdf">[Paper]</a> <a href="https://smlbansal.github.io/LB-WayPtNav/">[Project Website]</a><a href="https://youtu.be/7nC19Ai9u5E">[Video]</a>
-                                        </span>
-                                    </div> 
-
-                                    <h2 id="content"> Visual Navigation Among Humans With Optimal Control as a Supervisor</h2>
-                                    <div id="banner" class="content">
-                                        <div class="image26 object">
-                                            <img src="../images/research_images/humanav.gif" style="height: auto; width: 550px" alt="">
-                                        </div>
-                                        <span class="content">
-                                            <p>
-                                                Autonomous robots often navigate in unfamiliar, dynamic environments, where they need to share the space with humans. Navigating around humans is especially difficult because it requires predicting their future motion, which can be quite challenging. We propose a novel framework for navigation around humans which combines learning-based perception with model-based optimal control. The proposed framework learns to anticipate and react to peoples' motion based only on a monocular RGB image, without explicitly predicting the future human motion. Our method generalizes well to unseen buildings and humans in both simulation and real world environments. Furthermore, our experiments demonstrate that combining model-based control and learning leads to better and more data-efficient navigational behaviors as compared to a purely learning based approach.
-                                            </p>
-                                            <a href="https://arxiv.org/pdf/2003.09354.pdf">[Paper]</a> <a href="https://smlbansal.github.io/LB-WayPtNav-DH/">[Project Website]</a><a href="https://github.com/vtolani95/HumANav-Release">[Code]</a>
-                                        </span>
-                                    </div> 
-
+									
 									<h2>For a more exhaustive list of our research work please go <a href="../publications.html"><u>HERE!</u></a>  </h2> 
 								</section>
 						</div>
