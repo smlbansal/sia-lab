@@ -19,13 +19,21 @@
     width: 260px;
     text-align: center;
   }
+	.person-tile img {
+		width: 250px;       /* Ensures it fills the width of the tile */
+		height: 250px;     /* Set this to whatever height looks best on your site */
+		object-fit: cover; /* The magic property that prevents stretching */
+		object-position: center; /* Ensures the face stays in the middle when cropped */
+		object-fit: cover;
+		border-radius: 10px; 
+	}
 
-  .person-tile img {
+  /* .person-tile img {
     height: 210px;
     width: 210px;
     object-fit: cover;
     border-radius: 4px;
-  }
+  } */
 
   .person-name {
     font-weight: bold;
@@ -90,7 +98,7 @@
 										<h2 id="content"> Principal Investigator </h2>
 										<div id="banner" class="content" style="display: flex; align-items: center;">
 											<div>
-												<img src="images/people_images/somil3.jpg" style="height: 150px; width: 150px; object-fit: cover; margin-right:15px;" alt="">
+												<img src="images/people_images/somil3.jpg" style="height: 300px; width: 300px; object-fit: cover; margin-right:15px;" alt="">
 											</div>
 											<span class="content">
 												<p>
@@ -117,7 +125,7 @@
 												<div class="person-tile">
 													<img src="images/people_images/hao.JPG" alt="Student Photo" />
 													<div class="person-name">Hao Wang</div>
-													<div class="person-desc">Cooptimization of Safety and Performance for Long-Horizon Manipulation</div>
+													<div class="person-desc">Safety-Performance Cooptimization for Long-Horizon Manipulation</div>
 													<a href="https://scholar.google.com/citations?user=W5WYNgkAAAAJ&hl=en&authuser=1" class="button small" style="margin-top: 5px;">Personal Webpage</a>
 												</div>
 
@@ -136,7 +144,7 @@
 												</div>
 
 												<div class="person-tile">
-													<img src="images/people_images/aryaman.jpg" alt="Student Photo" />
+													<img src="images/people_images/aryaman.JPG" alt="Student Photo" />
 													<div class="person-name">Aryaman Gupta</div>
 													<div class="person-desc">Safe and robust learning-based controls for autonomous systems</div>
 													<a href="https://aryamangupta.site/" class="button small" style="margin-top: 5px;">Personal Webpage</a>
@@ -152,15 +160,18 @@
 												<div class="person-tile">
 													<img src="images/people_images/skarnik.jpg" alt="Student Photo" />
 													<div class="person-name">Sathwik Karnik</div>
-													<div class="person-desc">Safety and reliability of AI systems</div>
+													<div class="person-desc">Safety and reliability <br> of AI systems</div>
 													<a href="https://www.linkedin.com/in/sathwik-karnik-a72768172" class="button small" style="margin-top: 5px;">Personal Webpage</a>
 												</div>
 
+												<div class="person-tile">
+													<img src="images/people_images/jaeryoung.jpg" alt="Student Photo" />
+													<div class="person-name">Jaeryoung Lee</div>
+													<div class="person-desc">Safety guarantees for systems under perception uncertainty</div>
+													<a href="https://www.linkedin.com/in/jaeryoung-lee-610923304" class="button small" style="margin-top: 5px;">Personal Webpage</a>
+												</div>
 											</div>
-						
-					
-					
-
+										<br/>
 										<h2 id="content" style="margin-top:15px;"> Collaborators & Visiting Researchers</h2>
 										<div id="banner" class="content">
 
@@ -174,7 +185,7 @@
 											<div class="person-tile">
 												<img src="images/people_images/ajay.png" alt="Ajay Suresha Sathya" />
 												<div class="person-name">Ajay Suresha Sathya</div>
-												<div class="person-desc">Post-doctoral fellow in the Willow Research Team at Inria Paris.</div>
+												<div class="person-desc">Postdoc at Inria Paris.</div>
 												<a href="https://www.ajaysathya.com/" class="button small" style="margin-top: 5px;">Personal Webpage</a>
 											</div>
 
@@ -184,6 +195,11 @@
 												<div class="person-desc">PhD student at Waseda University.</div>
 											</div>
 
+										</div>
+
+
+										<h2 id="content" style="margin-top:10px;"> MS&UG Students</h2>
+										<div id="banner" class="content">
 											<div class="person-tile">
 												<img src="images/people_images/ali.png" alt="Ali Fuat Sahin" />
 												<div class="person-name">Ali Fuat Sahin</div>
@@ -195,13 +211,10 @@
 												<div class="person-name">Yunus Yazoglu</div>
 												<div class="person-desc">MS student at ETH Zurich.</div>
 											</div>
-
 										</div>
 
-										
-
-
-										<h2 id="content" style="margin-top:15px;"> Alumni </h2>
+										<h2 id="content" style="margin-top:10px;"> Alumni </h2>
+										<br/>
 										<h4 style="margin-bottom: -5px;" id="content"><u>PhD Students</u></h4>
 										
 										<div class="people-grid">
@@ -219,9 +232,12 @@
 													<a href="https://javierborquez.github.io" class="button small" style="margin-top: 5px;">Personal Webpage</a>
 												</div>
 											</div>
-
+										<br/>
 
 										<h4 style="margin-bottom: -5px;" id="content"><u>Undergraduate and Master's Students</u></h4>
+											
+										
+											<p style="margin-bottom: -5px;">Joshua Bowden (UG at Stanford)</p>
 											
 											<p style="margin-bottom: -5px;">Aditya Singh (PhD student at UPenn)</p>
 
