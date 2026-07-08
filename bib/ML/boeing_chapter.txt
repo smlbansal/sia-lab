@@ -1,8 +1,0 @@
-@incollection{bansal2019control,
-  title={Control and Safety of Autonomous Vehicles with Learning-Enabled Components},
-  author={Bansal, Somil and Tomlin, Claire J},
-  booktitle={Safe, Autonomous and Intelligent Vehicles},
-  pages={57--75},
-  year={2019},
-  publisher={Springer}
-}

@@ -1,6 +1,0 @@
-@article{bansal2019combining,
-  title={Combining Optimal Control and Learning for Visual Navigation in Novel Environments},
-  author={Bansal, Somil and Tolani, Varun and Gupta, Saurabh and Malik, Jitendra and Tomlin, Claire},
-  journal={arXiv preprint arXiv:1903.02531},
-  year={2019}
-}

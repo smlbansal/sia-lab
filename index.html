@@ -1,335 +1,142 @@
-<!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Safe and Intelligent Autonomy Lab</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    	<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" type="image/x-icon" href="favicon.ico">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Safe and Intelligent Autonomy Lab</title>
+    <link rel="stylesheet" href="assets/css/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="index.html"><span>Safe and Intelligent Autonomy</span> Lab @ Stanford</a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false">Menu</button>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html" aria-current="page">Homepage</a>
+          <a href="research.html">Research</a>
+          <a href="people.html">People</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="publications.html">Publications</a>
+          <a href="talks.html">Talks</a>
+          <a href="joinus.html">Join Us</a>
+        </nav>
+      </div>
+    </header>
 
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <main class="page">
+      <section class="intro">
+        <div class="intro-copy">
+          <h1>Safe and Intelligent Autonomy Lab</h1>
+          <p>Welcome to the Safe and Intelligent Autonomy (SIA) Lab! SIA Lab is part of the <a href="https://aa.stanford.edu/">Department of Aeronautics and Astronautics</a> at Stanford. Our lab develops principled methods for ensuring the safety of learning-enabled autonomous systems.</p>
+          <p>Modern robots increasingly rely on machine learning, foundation models, and data-driven decision-making to perceive, plan, and act in complex environments. These capabilities create tremendous opportunities, but also introduce new safety challenges: failures can arise from imperfect models, distribution shift, brittle policies, untested scenarios, and unexpected interactions with the real world.</p>
+          <p><em>Our central goal is to build the safety lifecycle for learning-enabled autonomy.</em> We develop theory, algorithms, and computational tools that help autonomous systems discover failures before deployment, intervene safely during deployment, and improve from failures and near-misses after deployment.</p>
+          <p>The technical backbone of our work is principled safety: reachability analysis, control theory, planning, verification, and learning-based safety representations. We use these foundations to design safer policies, evaluate their limitations, deploy them with runtime safeguards, and continually adapt them to new safety risks.</p>
+          <div class="actions">
+            <a class="button primary" href="research.html">Research</a>
+            <a class="button" href="joinus.html">Join Us</a>
+          </div>
+        </div>
+        <div class="hero-media carousel" data-carousel>
+          <div class="carousel-track">
+            <figure class="carousel-slide is-active">
+              <div class="media-pair">
+                <video autoplay loop muted playsinline><source src="assets/local/images/research_images/OneFilter.mp4" type="video/mp4"></video>
+                <video autoplay loop muted playsinline><source src="assets/local/images/research_images/OneFilterApproach.mp4" type="video/mp4"></video>
+              </div>
+              <figcaption class="media-caption">Safety filters for quadrupedal navigation in unknown environments.</figcaption>
+            </figure>
+            <figure class="carousel-slide">
+              <div class="media-pair">
+                <video autoplay loop muted playsinline><source src="assets/local/images/research_images/DeepReach_MPC.mp4" type="video/mp4"></video>
+                <video autoplay loop muted playsinline><source src="assets/local/images/research_images/DeepReach_MPC_method.mp4" type="video/mp4"></video>
+              </div>
+              <figcaption class="media-caption">Reachability-guided planning and control.</figcaption>
+            </figure>
+            <figure class="carousel-slide">
+              <div class="media-pair">
+                <video autoplay loop muted playsinline><source src="assets/local/images/research_images/mpcsafegil.mp4" type="video/mp4"></video>
+                <video autoplay loop muted playsinline><source src="assets/local/images/research_images/hybrid_vid_final_3_low_r_1.mp4" type="video/mp4"></video>
+              </div>
+              <figcaption class="media-caption">Safe imitation learning and safety analysis for hybrid robotic systems.</figcaption>
+            </figure>
+            <figure class="carousel-slide">
+              <div class="media-pair">
+                <img class="media-crop-right" src="assets/local/images/social_images/retreat_2025_1.jpg" alt="SIA Lab retreat group photo">
+                <img src="assets/local/images/social_images/retreat_2025_2.jpg" alt="SIA Lab retreat photo">
+              </div>
+              <figcaption class="media-caption">SIA Lab retreat, 2025.</figcaption>
+            </figure>
+            <figure class="carousel-slide">
+              <div class="media-pair">
+                <img src="assets/local/images/social_images/retreat_2025_3.jpg" alt="SIA Lab retreat group photo">
+                <img src="assets/local/images/social_images/retreat_2025_4.jpg" alt="SIA Lab retreat photo">
+              </div>
+              <figcaption class="media-caption">SIA Lab retreat, 2025.</figcaption>
+            </figure>
+          </div>
+          <button class="carousel-button prev" type="button" data-carousel-prev aria-label="Previous slide">&#8249;</button>
+          <button class="carousel-button next" type="button" data-carousel-next aria-label="Next slide">&#8250;</button>
+          <div class="carousel-dots" aria-label="Carousel slide controls">
+            <button type="button" class="is-active" data-carousel-dot aria-label="Show slide 1"></button>
+            <button type="button" data-carousel-dot aria-label="Show slide 2"></button>
+            <button type="button" data-carousel-dot aria-label="Show slide 3"></button>
+            <button type="button" data-carousel-dot aria-label="Show slide 4"></button>
+            <button type="button" data-carousel-dot aria-label="Show slide 5"></button>
+          </div>
+        </div>
+      </section>
 
-		  ga('create', 'UA-78683315-1', 'auto');
-		  ga('send', 'pageview');
+      <section class="section">
+        <h2>Research Themes</h2>
+        <div class="grid four">
+          <article class="card">
+            <h3>Design for Safety</h3>
+            <p>Methods for safety-aware data collection, policy training, verification, and evaluation that help learning-enabled autonomous systems avoid unsafe behavior before deployment.</p>
+          </article>
+          <article class="card">
+            <h3>Intervene Safely</h3>
+            <p>Runtime monitors, safety filters, reachability-guided planning, and recovery mechanisms that help autonomous systems respond safely to uncertainty and emerging risks.</p>
+          </article>
+          <article class="card">
+            <h3>Improve Over Time</h3>
+            <p>Failure analysis, near-miss mining, and safety feedback loops that use deployment experience to improve policies, monitors, simulators, and safety models.</p>
+          </article>
+          <article class="card">
+            <h3>Safety Foundations</h3>
+            <p>Foundations in reachability, control theory, planning, verification, and learning that provide rigorous tools for reasoning about safety in autonomous systems.</p>
+          </article>
+        </div>
+      </section>
 
-		</script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-	</head>
-	<body class="is-preload">
+      <section class="section" data-load-group data-step="8">
+        <div class="section-head">
+          <h2>News</h2>
+        </div>
+        <div class="news-list">
+          <article class="card news-card"><div class="date">June 2026</div><p>The SIA lab has a new rotating PhD student, Thomas MacLean, a visiting postdoc, Ajay Suresha Sathya, and two new visiting students Yunus Yazoglu from ETH and Akira Hatakeyama from JAXA. Welcome!</p></article>
+          <article class="card news-card"><div class="date">June 2026</div><p>Congrats to Umut, Aryaman, and Zeyuan for starting internships with Toyota Research Institute, Honda Research Institute, and Amazon Robotics.</p></article>
+          <article class="card news-card"><div class="date">June 2026</div><p>Four papers from SIA Lab were presented at ICRA 2026. Congratulations to Albert, Javier, Kaustav, Ryan, and collaborators.</p></article>
+          <article class="card news-card"><div class="date">May 2026</div><p>Congratulations to Dr. Kaustav Chakraborty for becoming the second member to graduate from our lab, and to Dr. Javier Borquez on joining Universidad de Santiago de Chile as faculty.</p></article>
+          <article class="card news-card"><div class="date">May 2026</div><p>Hao, Javier, Jason, Zeyuan, and collaborators will present a tutorial on reachability and CBF at CDC 2026.</p></article>
+          <article class="card news-card"><div class="date">May 2026</div><p>Congratulations to Sathwik and Aryaman for winning the Qualcomm Innovation Fellowship.</p></article>
+          <article class="card news-card"><div class="date">May 2026</div><p>Congratulations to Dr. Somil Bansal for receiving the IEEE Early Career Award in Robotics and Automation from the Robotics and Automation Society.</p></article>
+          <article class="card news-card"><div class="date">April 2026</div><p>Colton received the inaugural Stanford Robotics Fellowship to develop reliable monitoring and intervention schemes for VLAs.</p></article>
+          <article class="card news-card is-extra"><div class="date">April 2026</div><p>Congratulations Hao and Colton for the <a href="https://arxiv.org/pdf/2605.11479">paper</a> acceptance to RSS 2026.</p></article>
+          <article class="card news-card is-extra"><div class="date">April 2026</div><p>We started a three-year project with Toyota Research Institute focusing on safety in high-speed driving.</p></article>
+          <article class="card news-card is-extra"><div class="date">March 2026</div><p>The SIA lab has a new visiting student, Ali Fuat Sahin from EPFL, and an MS student member Joseph Lee from Stanford. Welcome!</p></article>
+          <article class="card news-card is-extra"><div class="date">March 2026</div><p>Congratulations Le and Umut for your <a href="https://ieeexplore.ieee.org/abstract/document/11488496">paper</a> acceptance to IEEE Robotics and Automation Letters.</p></article>
+          <article class="card news-card is-extra"><div class="date">January 2026</div><p>The SIA lab has a new rotating PhD student, Jearyoung Lee. Welcome!</p></article>
+          <article class="card news-card is-extra"><div class="date">December 2025</div><p>Congratulations Albert for your <a href="https://arxiv.org/abs/2511.14755">paper</a> acceptance to L4DC 2026.</p></article>
+          <article class="card news-card is-extra"><div class="date">September 2025</div><p>New <a href="https://arxiv.org/pdf/2509.21528?">paper</a> on detecting and steering misalignment in LLMs via latent reachability.</p></article>
+        </div>
+        <div class="load-controls">
+          <button class="button" type="button" data-show-more>Show More News</button>
+          <button class="button" type="button" data-show-less>Show Less</button>
+        </div>
+      </section>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<!-- Header -->
-								<header id="header">
-									<!-- <a href="index.html" class="logo"><strong>Safe and Intelligent Autonomy Lab</strong></a> -->
-									<a href="index.html" class="logo">Safe and Intelligent Autonomy (SIA) Lab @ Stanford</a>
-									<ul class="icons">
-										<li><a href="https://github.com/sia-lab-git" class="icon brands fa-github"><span class="label">Medium</span></a></li>
-									</ul>
-								</header>
-
-							<!-- Banner -->
-								<section id="banner">
-									<div class="text40">
-										<div id="carouselExampleCaptions" class="carousel slide" data-bs-theme="dark" data-bs-ride="carousel"  data-bs-interval="10000">
-										<div class="carousel-indicators">
-											<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-											<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-											<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-											<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-											<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-											<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
-										</div>
-										<div class="carousel-inner">
-
-										<div class="carousel-item active">
-											<div class="container-fluid p-0 m-0">
-												<div class="row gx-1 gy-0 justify-content-center"> 
-													<div class="col-6 p-0 m-0">
-														<video autoplay loop muted playsinline
-																	style="width:100%; aspect-ratio:4/3; object-fit:contain; display:block;">
-															<source src="images/research_images/OneFilter.mp4" type="video/mp4">
-														</video>
-													</div>
-													<div class="col-6 p-0 m-0">
-														<video autoplay loop muted playsinline
-																	style="width:100%; aspect-ratio:4/3; object-fit:contain; display:block;">
-															<source src="images/research_images/OneFilterApproach.mp4" type="video/mp4">
-														</video>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="carousel-item">
-											<div class="container-fluid p-0 m-0">
-												<div class="row gx-1 gy-0 justify-content-center">
-													<div class="col-6 p-0 m-0">
-														<video autoplay loop muted playsinline style="width:100%; aspect-ratio:4/3; object-fit:contain;">
-															<source src="images/research_images/DeepReach_MPC.mp4" type="video/mp4">
-														</video>
-													</div>
-													<div class="col-6 p-0 m-0">
-														<video autoplay loop muted playsinline style="width:100%; aspect-ratio:4/3; object-fit:contain;">
-															<source src="images/research_images/DeepReach_MPC_method.mp4" type="video/mp4">
-														</video>
-													</div>
-												</div>
-											</div>
-										</div>
-
-
-										<div class="carousel-item">
-											<video autoplay loop muted width="100%" style="aspect-ratio: 4; object-fit: contain; display: block; margin-left: auto; margin-right: auto;">
-												<source src="images/research_images/mpcsafegil.mp4" type="video/mp4">
-											</video>
-										</div>
-
-										<div class="carousel-item">
-											<video autoplay loop muted width="100%" style="aspect-ratio: 4; object-fit: contain; display: block; margin-left: auto; margin-right: auto;">
-												<source src="images/research_images/hybrid_vid_final_3_low_r_1.mp4" type="video/mp4">
-											</video>
-										</div>
-											
-
-											<div class="carousel-item">
-												<div class="container-fluid">
-													<div class="row p-0 m-1">
-														<div class="col-6 p-0 m-0">
-															<img src="images/social_images/retreat_2025_1.jpg" width="100%" style="aspect-ratio: 2; object-fit: cover; display: block; margin-left: auto; margin-right: auto;">
-														</div>
-														<div class="col-6 p-0 m-0">
-															<img src="images/social_images/retreat_2025_2.jpg" width="100%" style="aspect-ratio: 2; object-fit: contain; display: block; margin-left: auto; margin-right: auto;">
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="carousel-item">
-												<div class="container-fluid">
-													<div class="row p-0 m-1">
-														<div class="col-6 p-0 m-0">
-															<img src="images/social_images/retreat_2025_3.jpg" width="100%" style="aspect-ratio: 2; object-fit: cover; display: block; margin-left: auto; margin-right: auto;">
-														</div>
-														<div class="col-6 p-0 m-0">
-															<img src="images/social_images/retreat_2025_4.jpg" width="100%" style="aspect-ratio: 2; object-fit: contain; display: block; margin-left: auto; margin-right: auto;">
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="carousel-control-prev" style="margin-left: -3%;" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-											<span class="visually-hidden">Previous</span>
-										</div>
-										<div class="carousel-control-next" style="margin-right: -3%;" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-											<span class="carousel-control-next-icon" aria-hidden="true"></span>
-											<span class="visually-hidden">Next</span>
-										</div>
-										</div>
-										<br/>
-										<!-- <p><img class="image object" src="images/research_images/front_fig.png" alt="" ></p> -->
-
-										<!-- <header>-->
-	                    				<p align="justify">	
-											Welcome to the Safe and Intelligent Autonomy (SIA) Lab! SIA Lab is part of the <a href="https://aa.stanford.edu/"> Department of Aeronautics and Astronautics</a> at Stanford. The central question our lab aims to answer is <em>how can we enable robots to leverage the capabilities offered by modern ML and AI methods while maintaining safety guarantees?</em>
-	                    					Towards this goal, we develop theory and computational tools for robot safety verification (e.g., neural reachability methods for high-dimensional and black-box systems) and integrate them into different stages of the learning lifecycle. This includes methods to provide safety assurances during the design and training phase (e.g., via safety-guided data collection and learning correct-by-construction robot policies); continuous safety monitoring during test and deployment (e.g., through uncertainty quantification, anomaly detection, and safety shielding); and dynamically adapting to new safety risks during the robot’s lifecycle (e.g., via developing new stress-testing methods that expose hidden AI failure modes, trace their root causes, and enable targeted fixes). Our work is applied in a variety of domains, such as flying vehicles (quadrotors, eVTOLs), quadrupeds, autonomous cars, space exploration, and manipulation.
-	                    					<br/>
-	                    					<br/>
-
-	                    					Please see this <a href="https://www.youtube.com/watch?v=jeJ4x1EyIFM">talk</a> for a nice summary of the latest research directions in our group.
-										</p>
-
-										<p align="justify">	
-											<em>We are looking for undergraduate and graduate students to join our research group. If you are interested in robotics, control, and/or machine learning, consider <a href="joinus.html">joining us</a>!</em>
-											<br/>
-										</p>
-									</div>
-								</section>
-
-
-<!--                 <div class="tab-content clearfix">
-                  <div class="tab-pane active" id="1a">
-                    <a href="#">
-                      <img src="images/research_images/air3d.gif"  height="300">
-                    </a>
-                    <a href="#">
-                      <img src="images/research_images/turtlebot_office.gif"  height="300">
-                    </a>                 
-                  </div>
-                </div> -->                
-                				<section style="margin-bottom: 60px;">
-										<h2 style="margin-top:0px;" id="content"><u>News</u> </h2>
-
-										<p align="justify">[<strong>November 2025</strong>] New <a href="https://arxiv.org/abs/2511.14755">paper</a> on Robust Verification of Controllers under State Uncertainty.</p>
-
-										<p align="justify">[<strong>September 2025</strong>] New <a href="https://arxiv.org/pdf/2509.21528?">paper</a> on detecting and steering misalignment in LLMs via latent reachability.</p>
-
-										<p align="justify">[<strong>August 2025</strong>] New <a href="https://arxiv.org/abs/2508.03129">paper</a> on Safety-Aware Imitation Learning via MPC-Guided Disturbance Injection is out on arXiv.</p>
-
-										<p align="justify">[<strong>July 2025</strong>] New <a href="https://arxiv.org/abs/2507.22389">paper</a> on Safety Evaluation of Motion Plans Using Trajectory Predictors as Forward Reachable Set Estimators is out on arXiv.</p>
-
-										<p align="justify">[<strong>June 2025</strong>] New <a href="https://arxiv.org/abs/2506.23346">paper</a> on Safe and Performant Deployment of Autonomous Systems via Model Predictive Control and Hamilton-Jacobi Reachability Analysis is out on arXiv.</p>
-
-										<p align="justify">[<strong>June 2025</strong>] New <a href="https://arxiv.org/abs/2506.06570">paper</a> From Perception Logs to Failure Modes: Language-Driven Semantic Clustering of Failures for Robot Safety is out on arXiv.</p>
-
-										<p align="justify">[<strong>June 2025</strong>] Congratulations Javier, Luke, and Umut, for your <a href=https://arxiv.org/abs/2502.01924>paper</a> acceptance to IEEE Robotics and Automation Letters.</p>
-
-										<p align="justify">[<strong>June 2025</strong>] Congratulations Manan and Aditya, for your <a href=https://arxiv.org/abs/2502.11057>paper</a> acceptance to International Conference on Machine Learning (ICML), 2025.</p>
-
-										<p align="justify">[<strong>May 2025</strong>] New <a href="https://arxiv.org/abs/2505.11755">paper</a> on Reachability Barrier Networks: Learning Hamilton-Jacobi Solutions for Smooth and Flexible Control Barrier Functions is out on arXiv.</p>
-
-										<p align="justify">[<strong>April 2025</strong>] Congratulations Zeyuan and Le, for your <a href=https://arxiv.org/abs/2505.03830>paper</a> acceptance to Robotics Sciences and Systems (RSS), 2025.</p>
-
-										<p align="justify">[<strong>January 2025</strong>] Five papers from SIA Lab have been accepted to ICRA 2025. Congratulations, Umut, Kaustav, Vamsi, Aditya, and Zeyuan!</p>
-
-										<span id="show_1" style="display: none;">
-										  	<p align="justify">[<strong>December 2024</strong>] Congratulations Hao and Adityaya, for your <a href=https://arxiv.org/abs/2409.06696>paper</a> acceptance to IEEE Control Systems Letters (L-CSS).</p>
-											
-											<p align="justify">[<strong>December 2024</strong>] New <a href="https://arxiv.org/abs/2412.09989">paper</a>: "One Filter to Deploy Them All: Robust Safety for Quadrupedal Navigation in Unknown Environments" is out on arXiv.</p>
-
-											<p align="justify">[<strong>October 2024</strong>] New <a href="https://arxiv.org/abs/2410.21736">paper</a> on Enhancing Safety and Robustness of Vision-Based Controllers via Reachability Analysis is out on arXiv.</p>
-
-											<p align="justify">[<strong>September 2024</strong>] Six new pre-prints have been posted on arXiv.</p>
-
-											<p align="justify">[<strong>July 2024</strong>] Two papers accepted at CDC 2024! Congratulations.</p>
-
-											<p align="justify">[<strong>August 2024</strong>] Congratulations Javier, for your <a href="https://arxiv.org/abs/2312.15347#">paper</a> acceptance to IEEE Transactions on Robotics.</p>
-                      
-											<p align="justify">[<strong>June 2024</strong>] Congratulations Hao, for your <a href="https://arxiv.org/abs/2403.05771">paper</a> acceptance to IEEE Control Systems Letters.</p>
-                      
-											<p align="justify">[<strong>June 2024</strong>] Congrats to Javier for the <a href="https://arxiv.org/abs/2309.10893">paper</a> on Hamilton-Jacobi reachability analysis for hybrid systems with controlled and forced transitions acceptance to RSS 2024.</p>
-											
-											<p align="justify">[<strong>April 2024</strong>] Congratulations Albert, for your <a href="https://arxiv.org/abs/2312.08604">paper</a> acceptance to L4DC 2024</p>
-											   
-											<p align="justify">[<strong>April 2024</strong>] New <a href="https://arxiv.org/abs/2312.15347">paper</a> on Safety and Liveness Filtering Using Hamilton-Jacobi Reachability Analysis.</p>
-
-											<p align="justify">[<strong>April 2024</strong>] New <a href="https://arxiv.org/abs/2403.05771">paper</a> on Providing Safety Assurances for Systems with Unknown Dynamics is out on arXiv.</p>
-
-											<p align="justify">[<strong>April 2024</strong>] New <a href="https://arxiv.org/pdf/2404.05249">paper</a>, SAFE-GIL: SAFEty Guided Imitation Learning, is out on arXiv.</p>
-
-											<p align="justify">[<strong>April 2024</strong>] New <a href="https://arxiv.org/abs/2404.00814">paper</a> on Imposing Exact Safety Specifications in Neural Reachable Tubes is out on arXiv.</p>
-										</span>
-
-										<span id="show_2" style="display: none;">
-											<p align="justify">[<strong>December 2023</strong>] New <a href="https://arxiv.org/abs/2312.08604">paper</a> on verification of neural reachable tubes via scenario optimization and conformal prediction is out on arXiv.</p>
-											
-											<p align="justify">[<strong>September 2023</strong>] New <a href="https://arxiv.org/abs/2309.13475">paper</a> on detecting and mitigating system-level anomalies of vision-based controllers is out on arXiv.</p>
-											
-											<p align="justify">[<strong>September 2023</strong>] New <a href="https://arxiv.org/abs/2309.10893">paper</a> on Hamilton-Jacobi reachability analysis for hybrid systems with controlled and forced transitions is out on arXiv.</p>
-
-											<p align="justify">[<strong>August 2023</strong>] Three undergraduate students have joined our lab through the <a href="https://viterbiundergrad.usc.edu/research/curve/">CURVE program</a>. Welcome Kyle, Saim, and Sascha!</p>
-
-											<p align="justify">[<strong>May 2023</strong>] Congratulations Professor Somil Bansal, for winning the <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2240163&HistoricalAwards=false">NSF CAREER Award</a>!</p>
-
-											<p align="justify">[<strong>April 2023</strong>] Two new PhD students have joined our lab. Welcome Albert and Zeyuan!</p>
-
-											<p align="justify">[<strong>February 2023</strong>] Congratulations Kaustav, for your <a href="https://ieeexplore.ieee.org/document/10075409">paper</a> acceptance to RA-L!</p>
-
-											<p align="justify">[<strong>January 2023</strong>] Three papers from SIA Lab have been accepted to ICRA 2023. Congratulations, Albert, Javier, and Ken!</p>
-
-											<p align="justify">[<strong>January 2023</strong>] Our lab is offering a new course on learning and control for safety-critical robotic systems.</p>
-										</span>
-
-										<button onclick="show()" id="show_btn" style="margin-bottom: 30px;">Show More</button>
-										<button onclick="hide()" id="hide_btn" style="margin-bottom: 30px; display: none;">Show Less</button>
-
-											<!-- <p align="justify">[<strong>December 2022</strong>] Javier has passed his screening exam. Congratulations, Javier!</p> -->
-
-											<!-- <p align="justify">[<strong>November 2022</strong>] New <a href="https://arxiv.org/abs/2211.02736">paper</a> on finding failure cases for vision-based controller using reachability analysis is out on arXiv.</p>
-											
-											<p align="justify">[<strong>October 2022</strong>] New <a href="https://arxiv.org/pdf/2210.01199.pdf">paper</a> on maintaining and updating safety in human-robot interaction scenarios, despite incorrect human prediction models.</p>
-
-											<p align="justify"> [<strong>September 2022</strong>] New <a href="https://arxiv.org/pdf/2209.12336.pdf">paper</a> on providing safety guarantees for DeepReach. The scalability of DeepReach along with the proposed verification algorithm allows us to compute high-confidence safe sets for high-dimensional systems.</p> -->
-
-											<!-- <p align="justify"> [<strong>September 2022</strong>] New <a href="https://arxiv.org/pdf/2209.14976.pdf">paper</a> on quickly updating safety assurances for an autonomous system online as the system or the environment factors change.</p>
-
-											<p align="justify"> [<strong>August 2022</strong>] Four new undergraduate students have joined our lab through the CURVE program. Welcome Kyle, Jay, Vishnu, and Stan!</p> -->
-
-											<!--
-											<p align="justify"> [<strong>May 2022</strong>] We are very excited to host Albert Lin and Ken Nakamura from Princeton University over the summer. Welcome Albert, Ken!</p> -->
-								</section>
-						</div>
-					</div>
-
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>SIA Lab</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										
-										<li><a href="research.html">Research</a></li>
-										<li><a href="people.html">People</a></li>
-										<li><a href="teaching.html">Teaching</a></li>
-										<li><a href="tutorial.html">Tutorials and Workshops</a></li>
-										<!-- <li>
-											<span class="opener">Outreach</span>
-											<ul>
-												<li><a href="tutorial.html">Tutorials and Workshops</a></li>
-												<li><a href="ug_and_g.html">UG and Graduate</a></li>
-												<li><a href="k12.html">K-12</a></li>
-											</ul>
-										</li> -->
-										<li><a href="publications.html">Publications</a></li>
-										<li><a href="talks.html">Talks</a></li>
-										<li><a href="joinus.html">Join Us!</a></li>
-									</ul>
-								</nav>
-						</div>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-		<!-- Show More/Less functionality -->
-		<script>
-			const show_btn = document.getElementById("show_btn");
-			const hide_btn = document.getElementById("hide_btn");
-			const max_show_index = 2060;
-			let show_index = 0;
-			function show() {
-				show_index = Math.min(show_index + 1, max_show_index);
-				document.getElementById("show_" + show_index).style.display = "inline";
-				if (show_index >= max_show_index) {
-					show_btn.style.display = "none";
-				}
-				hide_btn.style.display = "inline"
-			}
-			function hide() {
-				document.getElementById("show_" + show_index).style.display = "none";
-				show_index = Math.max(show_index - 1, 0);
-				if (show_index <= 0) {
-					hide_btn.style.display = "none";
-				}
-				show_btn.style.display = "inline"
-			}
-		</script>
-
-	</body>
+      <footer class="footer">Safe and Intelligent Autonomy Lab at Stanford University.</footer>
+    </main>
+    <script src="assets/js/site.js"></script>
+  </body>
 </html>
-

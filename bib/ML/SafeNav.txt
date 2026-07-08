@@ -1,6 +1,0 @@
-@article{bajcsy2019efficient,
-  title={An Efficient Reachability-Based Framework for Provably Safe Autonomous Navigation in Unknown Environments},
-  author={Bajcsy, Andrea and Bansal, Somil and Bronstein, Eli and Tolani, Varun and Tomlin, Claire J},
-  journal={arXiv preprint arXiv:1905.00532},
-  year={2019}
-}

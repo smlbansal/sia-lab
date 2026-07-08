@@ -1,7 +1,0 @@
-@article{bansal2017adobo,
-  title={Goal-Driven Dynamics Learning via {Bayesian} Optimization},
-  author={Bansal, Somil and Calandra, Roberto and Xiao, Ted and Levine, Sergey and Tomlin, Claire J},
-  booktitle={56th Conference on Decision and Control (CDC)},  
-  year={2017},
-  organization={IEEE}
-}

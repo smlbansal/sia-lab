@@ -1,6 +1,0 @@
-@article{chen2017simulation,
-  title={Provably Safe and Robust Drone Routing via Sequential Path Planning: A Case Study in {San Francisco} and the {Bay Area}},
-  author={Chen, Mo and Bansal, Somil and Tanabe, Ken and Tomlin, Claire J},
-  journal={arXiv preprint arXiv:1705.04585},
-  year={2017}
-}

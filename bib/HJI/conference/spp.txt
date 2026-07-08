@@ -1,8 +1,0 @@
-@inproceedings{bansal2017safe,
-  title={Safe sequential path planning under disturbances and imperfect information},
-  author={Bansal, Somil and Chen, Mo and Fisac, Jaime F and Tomlin, Claire J},
-  booktitle={American Control Conference (ACC)},
-  pages={5550--5555},
-  year={2017},
-  organization={IEEE}
-}

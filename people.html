@@ -1,290 +1,128 @@
-<!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<style>
-  .people-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 10px;
-  }
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>People | SIA Lab</title>
+    <link rel="stylesheet" href="assets/css/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="index.html"><span>SIA</span> Lab @ Stanford</a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false">Menu</button>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html">Homepage</a>
+          <a href="research.html">Research</a>
+          <a href="people.html" aria-current="page">People</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="publications.html">Publications</a>
+          <a href="talks.html">Talks</a>
+          <a href="joinus.html">Join Us</a>
+        </nav>
+      </div>
+    </header>
 
-  .person-tile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 260px;
-    text-align: center;
-  }
+    <main class="page">
+      <h1>People</h1>
 
-  .person-tile img {
-    height: 210px;
-    width: 210px;
-    object-fit: cover;
-    border-radius: 4px;
-  }
+      <section class="section">
+        <h2>Principal Investigator</h2>
+        <article class="card publication-card pi-card">
+          <img src="assets/local/images/people_images/somil3.jpg" alt="Somil Bansal">
+          <div>
+            <h3>Somil Bansal</h3>
+            <p>Assistant Professor, Department of Aeronautics and Astronautics<br>Director, Safe and Intelligent Autonomy Lab</p>
+            <div class="pi-actions">
+              <a class="button" href="data/Somil_Bansal_CV.pdf">CV</a>
+              <a class="button icon-button" href="mailto:somil@stanford.edu" aria-label="Email Somil Bansal" title="Email Somil Bansal">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-11Zm2.5-.8a.8.8 0 0 0-.8.8v.4l7.3 4.6 7.3-4.6v-.4a.8.8 0 0 0-.8-.8h-13Zm13.8 3.2-6.9 4.3a.8.8 0 0 1-.8 0L4.7 8.9v8.6a.8.8 0 0 0 .8.8h13a.8.8 0 0 0 .8-.8V8.9Z"/></svg>
+              </a>
+              <a class="button icon-button scholar-button" href="https://scholar.google.com/citations?user=3mOq4dcAAAAJ&hl=en" aria-label="Google Scholar profile" title="Google Scholar profile">
+                <img src="assets/images/google-scholar-icon.svg" alt="">
+              </a>
+              <button class="button" type="button" data-bio-toggle aria-expanded="false" aria-controls="somil-bio">Bio</button>
+            </div>
+            <div class="bio-panel" id="somil-bio" hidden>
+              <p>Somil Bansal is an Assistant Professor in the Department of Aeronautics and Astronautics at Stanford University, where he leads the Safe and Intelligent Autonomy (SIA) Lab. Somil is broadly interested in developing theory, algorithms, and computational tools to ensure safety of AI-enabled autonomous and robotic systems. He received a Ph.D. in Electrical Engineering and Computer Sciences (EECS) from the University of California, Berkeley, in 2020. Before that, he obtained a B.Tech. in Electrical Engineering from the Indian Institute of Technology, Kanpur, and an M.S. in Electrical Engineering and Computer Sciences from UC Berkeley in 2012 and 2014, respectively. After his PhD, he spent a year as a Research Scientist at Waymo, focusing on safe planning for autonomous vehicles. He has also collaborated closely with companies like Skydio, Google, Toyota, NVIDIA, Boeing, as well as NASA JPL on deploying his safety algorithms on real-world autonomous systems. Somil has received several awards, most notably the IEEE Early Career Award in Robotics and Automation, the NSF CAREER award, the AIAA Excellence in Teaching Award at Stanford, the Eli Jury Award at UC Berkeley for his doctoral research, and research awards from Toyota and Open Philanthropy.</p>
+            </div>
+          </div>
+        </article>
+      </section>
 
-  .person-name {
-    font-weight: bold;
-    margin-top: 10px;
-  }
+      <section class="section">
+        <h2>PhD Students</h2>
+        <div class="person-grid">
+          <article class="card person-card"><img src="assets/local/images/people_images/umut.png" alt="Yusuf Umut Ciftci"><h3>Yusuf Umut Ciftci</h3><p>Safety and robustness of IL & RL agents</p><a class="pill" href="https://www.linkedin.com/in/yusuf-umut-ciftci">Personal Webpage</a></article>
+          <article class="card person-card"><img src="assets/local/images/people_images/hao.JPG" alt="Hao Wang"><h3>Hao Wang</h3><p>Safety-performance cooptimization for manipulation</p><a class="pill" href="https://scholar.google.com/citations?user=W5WYNgkAAAAJ&hl=en&authuser=1">Personal Webpage</a></article>
+          <article class="card person-card"><img src="assets/local/images/people_images/albert.png" alt="Albert Lin"><h3>Albert Lin</h3><p>Safety under real-world uncertainties</p><a class="pill" href="https://www.linkedin.com/in/albertkuilin/">Personal Webpage</a></article>
+          <article class="card person-card"><img src="assets/local/images/people_images/zeyuan.jpg" alt="Zeyuan Feng"><h3>Zeyuan Feng</h3><p>Safety value synthesis for complex systems</p><a class="pill" href="https://thezeyuanfeng.github.io/">Personal Webpage</a></article>
+          <article class="card person-card"><img src="assets/local/images/people_images/aryaman.jpg" alt="Aryaman Gupta"><h3>Aryaman Gupta</h3><p>Safe and robust learning-based controls</p><a class="pill" href="https://aryamangupta.site/">Personal Webpage</a></article>
+          <article class="card person-card"><img src="assets/local/images/people_images/colton.JPG" alt="Colton Ji Hyun Crosby"><h3>Colton Ji Hyun Crosby</h3><p>Learning-based safety for visuomotor policies</p><a class="pill" href="https://www.linkedin.com/in/colton-crosby">Personal Webpage</a></article>
+          <article class="card person-card"><img src="assets/local/images/people_images/skarnik.jpg" alt="Sathwik Karnik"><h3>Sathwik Karnik</h3><p>Safety and reliability of AI systems</p><a class="pill" href="https://www.linkedin.com/in/sathwik-karnik-a72768172">Personal Webpage</a></article>
+          <article class="card person-card"><img src="assets/local/images/people_images/jaeryoung.jpg" alt="Jaeryoung Lee"><h3>Jaeryoung Lee</h3><p>Safety guarantees under perception uncertainty</p><a class="pill" href="https://www.linkedin.com/in/jaeryoung-lee-610923304">Personal Webpage</a></article>
+        </div>
+      </section>
 
-  .person-desc {
-    font-size: 0.9em;
-    margin-top: 5px;
-  }
+      <section class="section">
+        <h2>Collaborators & Visiting Researchers</h2>
+        <div class="person-grid">
+          <article class="card person-card"><img src="assets/local/images/people_images/jason.png" alt="Jason Choi"><h3>Jason Choi</h3><p>Assistant Professor at UCLA.</p><a class="pill" href="https://jay-choi.me">Personal Webpage</a></article>
+          <article class="card person-card"><img src="assets/local/images/people_images/ajay.png" alt="Ajay Suresha Sathya"><h3>Ajay Suresha Sathya</h3><p>Postdoc at Inria Paris.</p><a class="pill" href="https://www.ajaysathya.com/">Personal Webpage</a></article>
+          <article class="card person-card"><img src="assets/local/images/people_images/akira.png" alt="Akira Hatakeyama"><h3>Akira Hatakeyama</h3><p>PhD student at Waseda University.</p></article>
+        </div>
+      </section>
 
-  h2, h4 {
-    color: #8c1c13; /* Stanford red */
-    border-bottom: 3px solid #8c1c13;
-    padding-bottom: 4px;
-    display: inline-block;
-  }
+      <section class="section">
+        <h2>MS & UG Students</h2>
+        <div class="person-grid">
+          <article class="card person-card"><img src="assets/local/images/people_images/joseph.png" alt="Joseph Lee"><h3>Joseph Lee</h3><p>MS student at Stanford.</p></article>
+          <article class="card person-card"><img src="assets/local/images/people_images/leo.png" alt="Leo Askianakis"><h3>Leo Askianakis</h3><p>MS student at Stanford.</p></article>
+          <article class="card person-card"><img src="assets/local/images/people_images/chris.png" alt="Chris Stanulet"><h3>Chris Stanulet</h3><p>MS student at Stanford.</p></article>
+          <article class="card person-card"><img src="assets/local/images/people_images/ali.png" alt="Ali Fuat Sahin"><h3>Ali Fuat Sahin</h3><p>MS student at EPFL.</p></article>
+          <article class="card person-card"><img src="assets/local/images/people_images/yunus.png" alt="Yunus Yazoglu"><h3>Yunus Yazoglu</h3><p>MS student at ETH Zurich.</p></article>
+        </div>
+      </section>
 
+      <section class="section">
+        <h2>Alumni</h2>
+        <h3>PhD Students</h3>
+        <div class="alumni-list">
+          <p><a href="https://vatsuak.github.io/">Kaustav Chakraborty</a> (Nvidia Autonomous Vehicles)</p>
+          <p><a href="https://javierborquez.github.io">Javier Borquez</a> (Assistant Professor, University of Santiago, Chile)</p>
+        </div>
 
-  .button.small:hover {
-    background-color: #a01e1c;
-  }
-</style>
+        <h3 style="margin-top: 1.4rem;">Undergraduate and Master's Students</h3>
+        <div class="alumni-list">
+          <p>Joshua Bowden (UG at Stanford)</p>
+          <p>Aditya Singh (PhD student at UPenn)</p>
+          <p>Le Qiu (PhD student at CMU)</p>
+          <p>Joonwon Kang (PhD student at Georgia Tech)</p>
+          <p>Santiago Thorup (Blue Origin)</p>
+          <p>Luca Castelletto (Archer)</p>
+          <p><a href="https://www.psrobotics.tech">Shuang Peng</a> (PhD student at USC)</p>
+          <p><a href="https://kensukenk.github.io/">Kensuke Nakamura</a> (PhD student at CMU)</p>
+          <p><a href="https://kevin-thankyou-lin.github.io/">Kevin Lin</a> (PhD student at UT Austin)</p>
+          <p>Jay Park (PhD student at USC)</p>
+          <p>Xingpeng Xia (PhD student at UMich)</p>
+          <p>Haimingyue Zhang (UG student at THU)</p>
+          <p>Krinal Doma (MS student at USC)</p>
+          <p>Vamsi Krishna Chilakamarri (UG student at IIT Madras)</p>
+          <p>Adityaya Dhande (UG student at IIT Bombay)</p>
+          <p>Sam Honor (UG student at WPI)</p>
+          <p>Kyle Woo (UG student at USC)</p>
+          <p>Sascha Manalili (UG student at USC)</p>
+          <p>Saim Hasan (UG student at USC)</p>
+          <p><a href="https://lukera.us/">Luke Raus</a> (The Webb Schools)</p>
+          <p><a href="https://tianhao-stan-wu.github.io/">Tianhao (Stan) Wu</a> (UG student at USC)</p>
+          <p>Vishnu Velayuthan (UG student at USC)</p>
+          <p>Adrian Faust (UG student at University of New Mexico)</p>
+          <p>Wenhao Tang (UG student at Tsinghua University)</p>
+        </div>
+      </section>
 
-<html>
-	<head>
-		<title>SIA Lab - People</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-78683315-1', 'auto');
-		  ga('send', 'pageview');
-
-		</script>
-	</head>
-	<body class="is-preload">
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo">People</a>
-									<ul class="icons">
-										<li><a href="https://github.com/sia-lab-git" class="icon brands fa-github"><span class="label">Medium</span></a></li>
-									</ul>
-								</header>
-
-							<!-- Content -->
-								<section>
-									<!-- Content -->
-										<h2 id="content"> Principal Investigator </h2>
-										<div id="banner" class="content" style="display: flex; align-items: center;">
-											<div>
-												<img src="images/people_images/somil3.jpg" style="height: 150px; width: 150px; object-fit: cover; margin-right:15px;" alt="">
-											</div>
-											<span class="content">
-												<p>
-													<strong>Somil Bansal</strong><br/>
-													Assistant Professor, Department of Aeronautics and Astronautics <br/>
-													Director, Safe and Intelligent Autonomy Lab
-												</p>
-												<ul class="actions">
-													<li><a href="https://smlbansal.github.io" class="button small">Personal Webpage</a></li>
-												</ul>
-											</span>
-										</div>
-										
-										<h2 style="margin-top: 15px;">PhD Students</h2>
-											<div class="people-grid">
-												<div class="person-tile">
-													<img src="images/people_images/kaustav.jpg" alt="Student Photo" />
-													<div class="person-name">Kaustav Chakraborty</div>
-													<div class="person-desc">System-level safety for perception-enabled autonomy</div>
-													<a href="https://vatsuak.github.io/" class="button small" style="margin-top: 5px;">Personal Webpage</a>
-												</div>
-
-												<div class="person-tile">
-													<img src="images/people_images/umut.png" alt="Student Photo" />
-													<div class="person-name">Yusuf Umut Ciftci</div>
-													<div class="person-desc">Safety and robustness of IL&RL agents</div>
-													<a href="https://www.linkedin.com/in/yusuf-umut-ciftci" class="button small" style="margin-top: 5px;">Personal Webpage</a>
-												</div>
-
-												<div class="person-tile">
-													<img src="images/people_images/hao.JPG" alt="Student Photo" />
-													<div class="person-name">Hao Wang</div>
-													<div class="person-desc">Cooptimization of Safety and Performance for Long-Horizon Manipulation</div>
-													<a href="https://scholar.google.com/citations?user=W5WYNgkAAAAJ&hl=en&authuser=1" class="button small" style="margin-top: 5px;">Personal Webpage</a>
-												</div>
-
-												<div class="person-tile">
-													<img src="images/people_images/albert.png" alt="Student Photo" />
-													<div class="person-name">Albert Lin</div>
-													<div class="person-desc">Safety of autonomous systems under real-world uncertainties </div>
-													<a href="https://www.linkedin.com/in/albertkuilin/" class="button small" style="margin-top: 5px;">Personal Webpage</a>
-												</div>
-												
-												<div class="person-tile">
-													<img src="images/people_images/zeyuan.jpg" alt="Student Photo" />
-													<div class="person-name">Zeyuan Feng</div>
-													<div class="person-desc">Safety value synthesis for complex dynamical systems </div>
-													<a href="https://thezeyuanfeng.github.io/" class="button small" style="margin-top: 5px;">Personal Webpage</a>
-												</div>
-
-												<div class="person-tile">
-													<img src="images/people_images/aryaman.jpg" alt="Student Photo" />
-													<div class="person-name">Aryaman Gupta</div>
-													<div class="person-desc">Safe and robust learning-based controls for autonomous systems</div>
-													<a href="https://aryamangupta.site/" class="button small" style="margin-top: 5px;">Personal Webpage</a>
-												</div>
-
-												<div class="person-tile">
-													<img src="images/people_images/colton.JPG" alt="Student Photo" />
-													<div class="person-name">Colton Ji Hyun Crosby</div>
-													<div class="person-desc">Learning-based safety for visuomotor policy manipulation</div>
-													<a href="https://www.linkedin.com/in/colton-crosby" class="button small" style="margin-top: 5px;">Personal Webpage</a>
-												</div>
-												
-												<div class="person-tile">
-													<img src="images/people_images/skarnik.jpg" alt="Student Photo" />
-													<div class="person-name">Sathwik Karnik</div>
-													<div class="person-desc">Safety and reliability of AI systems</div>
-													<a href="https://www.linkedin.com/in/sathwik-karnik-a72768172" class="button small" style="margin-top: 5px;">Personal Webpage</a>
-												</div>
-
-											</div>
-						
-					
-					
-
-										<h2 id="content" style="margin-top:15px;"> Collaborators & Visiting Researchers</h2>
-										<div id="banner" class="content">
-											<div> <!-- <div class="image25 object"> -->
-												<img src="images/people_images/jason.png" style="height: 150px; width: 150px; object-fit: cover; margin-right:15px;" alt="">
-											</div>
-											<span class="content">
-											<p>
-												<strong>Jason Choi</strong>
-												<br/>
-												Visiting Scholar, incoming assistant professor at UCLA.
-											</p>
-											<br/>
-											<ul class="actions">
-												<li><a href="https://jay-choi.me" class="button small">Personal Webpage</a></li>
-											</ul>
-											</span>
-										</div>
-
-
-										<h2 id="content" style="margin-top:15px;"> Alumni </h2>
-										<h4 style="margin-bottom: -5px;" id="content"><u>PhD Students</u></h4>
-										<p> <a href="https://javierborquez.github.io">Javier Borquez</a> (Assistant Professor, University of Santiago, Chile)</p>
-
-										<h4 style="margin-bottom: -5px;" id="content"><u>Undergraduate and Master's Students</u></h4>
-											
-											<p style="margin-bottom: -5px;">
-												<a href="https://www.psrobotics.tech">Shuang Peng</a> (PhD student at USC)
-											</p>
-											<p style="margin-bottom: -5px;">
-												<a href="https://kensukenk.github.io/">Kensuke Nakamura</a> (PhD student at CMU)
-											</p>
-
-											<p style="margin-bottom: -5px;">
-												<a href="https://kevin-thankyou-lin.github.io/">Kevin Lin</a> (PhD student at UT Austin)
-											</p>
-											
-											<p style="margin-bottom: -5px;">Jay Park (PhD student at USC)</p>
-											
-											<p style="margin-bottom: -5px;">Xingpeng Xia</a> (PhD student at UMich)</p>
-											
-											<p style="margin-bottom: -5px;"> Haimingyue Zhang (UG student at THU)</p>
-
-											<p style="margin-bottom: -5px;"> Krinal Doma (MS student at USC)</p>
-
-											<p style="margin-bottom: -5px;"> Le Qiu (UG student at THU)</p>
-											
-											<p style="margin-bottom: -5px;"> Vamsi Krishna Chilakamarri (UG student at IIT Madras)</p>
-
-											<p style="margin-bottom: -5px;"> Adityaya Dhande (UG student at IIT Bombay)</p>
-											
-											<p style="margin-bottom: -5px;"> Sam Honor (UG student at WPI)</p>
-
-											<p style="margin-bottom: -5px;"> Kyle Woo (UG student at USC)</p>
-
-											<p style="margin-bottom: -5px;"> Sascha Manalili (UG student at USC)</p>
-											
-											<p style="margin-bottom: -5px;">Saim Hasan (UG student at USC)</p>
-
-											<p style="margin-bottom: -5px;"><a href="https://lukera.us/">Luke Raus</a> (The Webb Schools)</p>
-											
-
-											<p style="margin-bottom: -5px;">
-												<a href="https://tianhao-stan-wu.github.io/">Tianhao (Stan) Wu</a> (UG student at USC)
-											</p>
-
-											<p style="margin-bottom: -5px;">Vishnu Velayuthan (UG student at USC)</p>
-
-											<p style="margin-bottom: -5px;"> Adrian Faust (UG student at University of New Mexico)</p>
-
-											<p style="margin-bottom: -5px;"> Wenhao Tang (UG student at Tsinghua University)</p>
-
-											
-								</section>
-						</div>
-					</div>
-
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>SIA Lab</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										
-										<li><a href="research.html">Research</a></li>
-										<li><a href="people.html">People</a></li>
-										<li><a href="teaching.html">Teaching</a></li>
-										
-										<li><a href="tutorial.html">Tutorials and Workshops</a></li>
-										<!-- <li>
-											<span class="opener">Outreach</span>
-											<ul>
-												<li><a href="tutorial.html">Tutorials and Workshops</a></li>
-												<li><a href="ug_and_g.html">UG and Graduate</a></li>
-												<li><a href="k12.html">K-12</a></li>
-											</ul>
-										</li> -->
-										<li><a href="publications.html">Publications</a></li>
-										<li><a href="talks.html">Talks</a></li>
-										<li><a href="joinus.html">Join Us!</a></li>
-									</ul>
-								</nav>
-
-						</div>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+      <footer class="footer">Safe and Intelligent Autonomy Lab at Stanford University.</footer>
+    </main>
+    <script src="assets/js/site.js"></script>
+  </body>
 </html>

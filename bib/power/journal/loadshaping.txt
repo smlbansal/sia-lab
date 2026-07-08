@@ -1,7 +1,0 @@
-@article{leFloch2017plug,
-  title={Plug-and-Play Model Predictive Control for Load Shaping and Voltage Control in Smart Grids},
-  author={Le Floch, Caroline and Bansal, Somil and Tomlin, Claire J and Moura, Scott and Zeilinger, Melanie N},
-  journal={IEEE Transactions on Smart Grid},
-  year={2017},
-  publisher={IEEE}
-}

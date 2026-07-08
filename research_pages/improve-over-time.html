@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Improve Over Time | SIA Lab</title><link rel="stylesheet" href="../assets/css/site.css"></head>
+  <body>
+    <header class="site-header"><div class="nav-shell"><a class="brand" href="../index.html"><span>SIA</span> Lab @ Stanford</a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false">Menu</button><nav class="nav-links" aria-label="Primary navigation"><a href="../index.html">Homepage</a><a href="../research.html" aria-current="page">Research</a><a href="../people.html">People</a><a href="../teaching.html">Teaching</a><a href="../publications.html">Publications</a><a href="../talks.html">Talks</a><a href="../joinus.html">Join Us</a></nav></div></header>
+    <main class="page">
+      <a class="back-link" href="../research.html">&larr; Back to research themes</a>
+      <h1>Improve Over Time</h1>
+      <p class="theme-subtitle">Failure analysis, near-miss learning, and safety feedback loops</p>
+      <p>Safety is not a one-time property established before deployment. Failures, near-misses, and runtime interventions provide valuable signals about where an autonomous system is brittle. In this theme, we study how deployment experience can be used to diagnose weaknesses, update safety models, improve policies and simulators, and reduce future interventions.</p>
+
+      <section class="section">
+        <h2>Representative Projects</h2>
+        <div class="project-grid">
+          <article class="card project-card"><img src="../assets/local/images/research_images/closed-loop_failures_of_vision-based_controllers_research_page.jpg" alt="Closed-loop failure discovery"><div class="project-card-body"><h3>Discovering Closed-Loop Failures of Vision-Based Controllers</h3><p>Vision-based controllers can fail in surprising closed-loop scenarios even when their perception outputs appear plausible. This work formulates failure discovery as an optimal control problem, enabling targeted search for simulator states and visual inputs that trigger system-level failures.</p><div class="link-row"><a class="pill" href="https://arxiv.org/pdf/2211.02736.pdf">Paper</a><a class="pill" href="https://vatsuak.github.io/failure-detection/">Website</a><a class="pill" href="https://youtu.be/lGNjvyfW1mc?si=U0PniXpo8vdWYJdC">Video</a></div></div></article>
+          <article class="card project-card"><img src="../assets/local/images/paper_images/mllm_aryaman_umut.png" alt="Failure taxonomy discovery"><div class="project-card-body"><h3>Unsupervised Discovery of Failure Taxonomies from Deployment Logs</h3><p>Large collections of robot failure logs are hard to analyze manually. This work uses vision-language reasoning to produce structured failure explanations, then clusters those explanations to discover recurring, interpretable failure modes that can guide targeted data collection, policy refinement, and runtime monitoring.</p><div class="link-row"><a class="pill" href="https://arxiv.org/abs/2506.06570">Paper</a><a class="pill" href="https://mllm-failure-clustering.github.io/">Website</a></div></div></article>
+          <article class="card project-card"><img src="../assets/local/images/research_images/failure_detection_mitigation.png" alt="Failure mining and targeted retraining"><div class="project-card-body"><h3>Enhancing Safety and Robustness of Vision-Based Controllers via Failure Mining and Targeted Retraining</h3><p>Neural reachable tubes are used to stress-test vision-based controllers and mine closed-loop failure modes. The discovered failures then support both runtime failure monitoring and targeted retraining, improving robustness to known failure modes.</p><div class="link-row"><a class="pill" href="https://arxiv.org/abs/2410.21736">Paper 1</a><a class="pill" href="https://arxiv.org/abs/2309.13475">Paper 2</a><a class="pill" href="https://vatsuak.github.io/visual-failure-mitigation/">Website</a><a class="pill" href="https://github.com/sia-lab-git/visual_failure_mitigation">Code</a></div></div></article>
+        </div>
+      </section>
+      <footer class="footer">Safe and Intelligent Autonomy Lab at Stanford University.</footer>
+    </main><script src="../assets/js/site.js"></script>
+  </body>
+</html>

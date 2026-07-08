@@ -1,9 +1,0 @@
-@article{chen2016robust,
-  title={Robust Sequential Trajectory Planning Under Disturbances and Adversarial Intruder},
-  author={Chen, Mo and Bansal, Somil and Fisac, Jaime F and Tomlin, Claire J},
-  journal={IEEE Transactions on Control Systems Technology},
-  number={99},
-  pages={1--17},
-  year={2018},
-  publisher={IEEE}
-}

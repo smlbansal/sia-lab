@@ -1,6 +1,0 @@
-@article{ghosh2019new,
-  title={A New Simulation Metric to Determine Safe Environments and Controllers for Systems with Unknown Dynamics},
-  author={Ghosh, Shromona and Bansal, Somil and Sangiovanni-Vincentelli, Alberto and Seshia, Sanjit A and Tomlin, Claire J},
-  journal={arXiv preprint arXiv:1902.10320},
-  year={2019}
-}

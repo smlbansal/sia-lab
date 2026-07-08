@@ -1,6 +1,0 @@
-@article{bansal2017safe,
-  title={Safe and Resilient Multi-vehicle Trajectory Planning Under Adversarial Intruder},
-  author={Bansal, Somil and Chen, Mo and Tomlin, Claire J},
-  journal={arXiv preprint arXiv:1711.02540},
-  year={2017}
-}

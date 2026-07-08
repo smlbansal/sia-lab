@@ -1,8 +1,0 @@
-@article{bansal2016learning,
-  title={Learning quadrotor dynamics using neural network for flight control},
-  author={Bansal, Somil and Akametalu, Anayo K and Jiang, Frank J and Laine, Forrest and Tomlin, Claire J},
-  booktitle={55th Conference on Decision and Control (CDC)},       
-  pages={4653--4660},
-  year={2016},
-  organization={IEEE}
-}

@@ -1,6 +1,0 @@
-@article{bansal2018contextspecific,
-  title={Context-Specific Validation of Data-Driven Models},
-  author={Bansal, Somil and Ghosh, Shromona and Sangiovanni-Vincentelli, Alberto and Seshia, Sanjit A. and Tomlin, Claire J},
-  journal={arXiv preprint arXiv:1802.04929},
-  year={2018}
-}

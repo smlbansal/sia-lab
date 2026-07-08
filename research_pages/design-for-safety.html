@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Design for Safety | SIA Lab</title><link rel="stylesheet" href="../assets/css/site.css"></head>
+  <body>
+    <header class="site-header"><div class="nav-shell"><a class="brand" href="../index.html"><span>SIA</span> Lab @ Stanford</a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false">Menu</button><nav class="nav-links" aria-label="Primary navigation"><a href="../index.html">Homepage</a><a href="../research.html" aria-current="page">Research</a><a href="../people.html">People</a><a href="../teaching.html">Teaching</a><a href="../publications.html">Publications</a><a href="../talks.html">Talks</a><a href="../joinus.html">Join Us</a></nav></div></header>
+    <main class="page">
+      <a class="back-link" href="../research.html">&larr; Back to research themes</a>
+      <h1>Design for Safety</h1>
+      <p class="theme-subtitle">Safe learning, training, evaluation, and data collection</p>
+      <p>Safe autonomy should not rely only on last-minute correction. A well-designed system should learn from the right data, optimize the right objectives, understand its limitations, and avoid operating near unsafe regimes whenever possible. In this theme, we develop methods for safety-aware training, data collection, verification, and pre-deployment evaluation of learning-enabled autonomous systems.</p>
+
+      <section class="section">
+        <h2>Representative Projects</h2>
+        <div class="project-grid">
+          <article class="card project-card"><img src="../assets/local/images/research_images/safegil_cover.jpg" alt="SAFE-GIL project overview"><div class="project-card-body"><h3>Safety Guided Imitation Learning</h3><p>SAFE-GIL makes imitation learning safer at design time by collecting data in safety-critical states. Reachability-guided disturbance injection exposes the learner to the kinds of errors it may make during deployment, reducing safety failures before the policy is used on a robot.</p><div class="link-row"><a class="pill" href="https://arxiv.org/abs/2404.05249">Paper</a><a class="pill" href="https://y-u-c.github.io/safegil/">Website</a></div></div></article>
+          <article class="card project-card"><img src="../assets/local/images/research_images/stable_bc.jpg" alt="Stable behavior cloning project overview"><div class="project-card-body"><h3>Stable Behavior Cloning</h3><p>Stable-BC adds control-theoretic structure to behavior cloning so learned policies move back toward demonstrated behaviors instead of drifting away under covariate shift. The result is a simple training modification with stronger robustness properties.</p><div class="link-row"><a class="pill" href="https://arxiv.org/abs/2408.06246">Paper</a><a class="pill" href="https://collab.me.vt.edu/Stable-BC/">Website</a><a class="pill" href="https://github.com/VT-Collab/Stable-BC">Code</a></div></div></article>
+          <article class="card project-card"><img src="../assets/local/images/paper_images/offline_policy_eval_hao.png" alt="Offline policy evaluation overview"><div class="project-card-body"><h3>Offline Policy Evaluation for Manipulation Policies</h3><p>This work evaluates manipulation policies from offline rollouts with sparse rewards and finite horizons. A discounted liveness formulation yields value estimates that better track task progress and reduce truncation bias before deployment.</p><div class="link-row"><a class="pill" href="https://arxiv.org/pdf/2605.11479">Paper</a></div></div></article>
+          <article class="card project-card"><img src="../assets/local/images/research_images/visnav2.gif" alt="Visual navigation in novel environments"><div class="project-card-body"><h3>Optimal Control and Learning for Visual Navigation</h3><p>A modular visual navigation policy combines learned high-level perception with model-based planning and control. This design improves generalization to new buildings, transfers from simulation to reality, and uses data more efficiently than purely learned navigation.</p><div class="link-row"><a class="pill" href="https://arxiv.org/abs/1903.02531">Paper</a><a class="pill" href="https://smlbansal.github.io/LB-WayPtNav/">Website</a><a class="pill" href="https://youtu.be/GNfS6vDlqqQ">Video</a></div></div></article>
+        </div>
+      </section>
+      <footer class="footer">Safe and Intelligent Autonomy Lab at Stanford University.</footer>
+    </main><script src="../assets/js/site.js"></script>
+  </body>
+</html>

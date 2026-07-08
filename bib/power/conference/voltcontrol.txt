@@ -1,8 +1,0 @@
-@inproceedings{bansal2014plug,
-  title={Plug-and-play model predictive control for electric vehicle charging and voltage control in smart grids},
-  author={Bansal, Somil and Zeilinger, Melanie N and Tomlin, Claire J},
-  booktitle={53rd Annual Conference on Decision and Control (CDC)},
-  pages={5894--5900},
-  year={2014},
-  organization={IEEE}
-}

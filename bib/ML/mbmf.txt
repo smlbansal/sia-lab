@@ -1,6 +1,0 @@
-@article{bansal2017mbmf,
-  title={MBMF: Model-Based Priors for Model-Free Reinforcement Learning},
-  author={Bansal, Somil and Calandra, Roberto and Levine, Sergey and Tomlin, Claire J},
-  journal={arXiv preprint arXiv:1709.03153},
-  year={2017}
-}

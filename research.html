@@ -1,231 +1,69 @@
-<!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Somil Bansal</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Research | SIA Lab</title>
+    <link rel="stylesheet" href="assets/css/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="index.html"><span>SIA</span> Lab @ Stanford</a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false">Menu</button>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html">Homepage</a>
+          <a href="research.html" aria-current="page">Research</a>
+          <a href="people.html">People</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="publications.html">Publications</a>
+          <a href="talks.html">Talks</a>
+          <a href="joinus.html">Join Us</a>
+        </nav>
+      </div>
+    </header>
 
+    <main class="page">
+      <h1>Research</h1>
+      <p>Autonomous systems are increasingly powered by machine learning, foundation models, and data-driven decision-making. These methods enable robots to operate in complex environments, but they also introduce new safety challenges: brittle policies, imperfect models, distribution shift, untested scenarios, and unexpected interactions during deployment.</p>
+      <p>At SIA Lab, we develop lifecycle safety methods for learning-enabled autonomy. Our goal is to help autonomous systems be designed with safety in mind, monitored and corrected during deployment, and improved from failures and near-misses over time. Across these stages, our work is grounded in principled safety foundations, including reachability analysis, control theory, planning, verification, and learning.</p>
+      <p>Our research is organized around four themes.</p>
 
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      <section class="section">
+        <div class="theme-banner-grid">
+          <a class="theme-banner" href="research_pages/design-for-safety.html">
+            <img src="assets/images/design-for-safety-icon-cropped.png" alt="Safety-aware data collection and training icon">
+            <div>
+              <h2>Design for Safety</h2>
+              <p>Building safer systems before deployment</p>
+            </div>
+          </a>
+          <a class="theme-banner" href="research_pages/intervene-safely.html">
+            <img src="assets/images/intervene-safely-icon.png" alt="Runtime monitoring and safe intervention icon">
+            <div>
+              <h2>Intervene Safely</h2>
+              <p>Responding to risk during deployment</p>
+            </div>
+          </a>
+          <a class="theme-banner" href="research_pages/improve-over-time.html">
+            <img src="assets/images/improve-over-time-icon.png" alt="Failure mining and feedback loop icon">
+            <div>
+              <h2>Improve Over Time</h2>
+              <p>Learning from failures and near-misses</p>
+            </div>
+          </a>
+          <a class="theme-banner" href="research_pages/safety-foundations.html">
+            <img src="assets/images/safety-foundations-icon.svg" alt="Reachability foundations shield icon">
+            <div>
+              <h2>Safety Foundations</h2>
+              <p>Principled tools for reasoning about safety</p>
+            </div>
+          </a>
+        </div>
+      </section>
 
-		  ga('create', 'UA-78683315-1', 'auto');
-		  ga('send', 'pageview');
-
-		</script>
-	</head>
-	<body class="is-preload">
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo">Research Areas</a>
-									<ul class="icons">
-										<li><a href="https://github.com/sia-lab-git" class="icon brands fa-github"><span class="label">Medium</span></a></li>
-									</ul>
-								</header>
-
-							<!-- Content -->
-								<section>
-									<!-- <header class="main">
-										<h1>Research Areas</h1>
-									</header> -->
-									<div class="text40">
-										<p>
-											Autonomous robotic systems have the potential to fundamentally transform our society. They hold the promise for a world where drones routinely inspect and repair our cities' infrastructure, legged robots aid in search and rescue missions in disaster-stricken scenarios, and flying taxis drop us off at the airport during rush hours. However, as robotic systems transition from controlled test environments to widespread deployment, assuring the safety of learning-enabled autonomy has emerged as a foundational challenge. Machine learning (ML) is increasingly central to decision-making in robotics; yet, these methods can be brittle in the face of uncertainty and novel conditions. This is further confounded by the fact that, unlike traditional robotic systems, ML-based systems are non-static – they may adapt during deployment or retrain over time. This makes robotic safety a dynamic and life-long concern and not just a pre-deployment artifact.
-										<br>
-										<br>
-											The central question our research aims to answer is <em>“How can we enable robots to leverage the capabilities offered by modern ML methods while ensuring rigorous safety guarantees?”</em> Towards this goal, we develop theoretical and computational frameworks for robot safety verification and apply them to ML-enabled robotic systems. Our long-term vision is to develop a <em>continual safety framework</em> for ML-emabled robotic systems where safety is provisionally established during design and training, actively monitored and adapted during operation, and refined through failure discovery post-deployment, enabling autonomy that becomes safer through use.
-										<br>
-										<br>
-											<!-- In short term, my research focuses on understanding how machine learning can be used to achieve the above goals. Particularly, I focus on two aspects of robot learning: <br />
-											(a) how can robots learn to make intelligent decisions in a data-efficient manner by combining learning with classical, model-based planning and control methods, especially when the robot relies on perception and vision sensors?<br />
-											(b) how can robots maintain safety while using learning for decision-making? -->
-										
-											Please click on one of the following links to learn more about our research.
-										</p>
-									</div>
-
-									 <div class="container">
-										<section class="cms-boxes">
-										  <div class="container-fluid">
-											<div class="row">
-											<!--
-											  <div class="col-md-4 cms-boxes-outer">
-												<div class="cms-boxes-items cms-control">
-												  <div class="boxes-align">
-													<div class="small-box">
-													  <h2><a href="research_safe_reach.html">Safety and Reachability Analysis</a></h2>
-													  <p>Using control theory to develop safe controllers</p>
-													</div>
-												  </div>
-												</div>
-											  </div>
-											  <div class="col-md-4 cms-boxes-outer">
-												<div class="cms-boxes-items cms-vision">
-												  <div class="boxes-align">
-													<div class="small-box">
-													  <h2><a href="research_safelearning.html">Safe Learning and Online Adaptation</a></h2>
-													  <p>Safe Automomous Senseing and Perception </p>
-													</div>
-												  </div>
-												</div>
-											  </div>
-											  <div class="col-md-4 cms-boxes-outer">
-												<div class="cms-boxes-items cms-intelligence">
-												  <div class="boxes-align">
-													<div class="small-box">
-													  <h2><a href="research_robotics.html">Learning and Intelligent Robotics</a></h2>
-													  <p>Safe decision making and Inference</p>
-													</div>
-												  </div>
-												</div>
-											  </div> 
-											-->
-
-											  <div class="col-5">
-												<a href="research_pages/safety_tools_and_algorithms.html">
-													<img onmouseover="expand(this)" onmouseout="shrink(this)" src="images/research_images/three_vehicle_brt.png" style="width:100%; aspect-ratio:1; object-fit: cover; border: 2px solid black;">
-												</a>
-											  </div>
-
-											  <div class="col-5">
-												<a href="research_pages/ai-safety_for_robotics.html">
-													<img onmouseover="expand(this)" onmouseout="shrink(this)" src="images/research_images/safe_hri_research_page.gif" style="width:100%; aspect-ratio:1; object-fit: cover; border: 2px solid black;">
-												</a>
-											  </div>
-											
-											  <div class="col-5">
-												<a href="research_pages/safety_for_AI_systems.html">
-													<img onmouseover="expand(this)" onmouseout="shrink(this)" src="images/research_images/safety4AI.png" style="width:100%; aspect-ratio:1; object-fit: cover; border: 2px solid black;">
-												</a>
-											  </div>
-
-											</div>
-										  </div>
-										</section>
-									  </div>
-
-									  <!--
-									  <h2 id="content"> Learning Safe and Robust Controllers</h2>
-										<div id="banner" class="content">
-											<div class="image26 object">
-												<img src="./images/research_images/deepreach.png" style="height: 200px; width: auto" alt="">
-											</div>
-											<span class="content">
-												<p>
-													Current deep learning-based approaches often consider safety requirements <em>after the fact</em>. In this thrust, we study how we can programmatically incorporate safety requirements during the training process itself in order to learn inherently safe and robust controllers for robotic and autonomous systems.
-												</p>
-											</span>
-										</div>
-
-									  <h2 id="content"> Operation-time safety under learning-enabled controllers</h2>
-										<div id="banner" class="content">
-											<div class="image26 object">
-												<img src="./images/research_images/deepreach.png" style="height: 200px; width: auto" alt="">
-											</div>
-											<span class="content">
-												<p>
-													When learning-enabled systems are deployed in the real world, they will inevitably encounter new data and situations that they haven’t seen before or do not understand. In this thrust, we study how we can detect such OOD situations and correspondingly adapt system safety assurances online.
-												</p>
-											</span>
-										</div>
-
-									  <h2 id="content"> Continuous failure discovery and safety improvement in learning-based systems</h2>
-										<div id="banner" class="content">
-											<div class="image26 object">
-												<img src="./images/research_images/deepreach.png" style="height: 200px; width: auto" alt="">
-											</div>
-											<span class="content">
-												<p>
-													In this thrust, we study methods that allow for efficient mining of failures and corner cases of a learning-enabled system. The discovered failures are then used to refine the learning components to make them more robust over the system’s lifecycle. 
-												</p>
-											</span>
-										</div>
-
-									  <h2 id="content"> Theoretical and computational advances in the safety analysis of dynamical systems </h2>
-										<div id="banner" class="content">
-											<div class="image26 object">
-												<img src="./images/research_images/deepreach.png" style="height: 200px; width: auto" alt="">
-											</div>
-											<span class="content">
-												<p>
-													In this thrust, we focus on the theoretical and computational advances of safety analysis methods, such as Hamilton-Jacobi Reachability analysis and Control Barrier Functions, to broaden their applicability to larger, interactive, and more complex robotic systems.
-												</p>
-											</span>
-										</div>
-										-->
-
-								</section>
-						</div>
-					</div>
-
-					<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>SIA Lab</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										
-										<li><a href="research.html">Research</a></li>
-										<li><a href="people.html">People</a></li>
-										<li><a href="teaching.html">Teaching</a></li>
-										<li><a href="tutorial.html">Tutorials and Workshops</a></li>
-										<!-- <li>
-											<span class="opener">Outreach</span>
-											<ul>
-												<li><a href="tutorial.html">Tutorials and Workshops</a></li>
-												<li><a href="ug_and_g.html">UG and Graduate</a></li>
-												<li><a href="k12.html">K-12</a></li>
-											</ul>
-										</li> -->
-										<li><a href="publications.html">Publications</a></li>
-										<li><a href="talks.html">Talks</a></li>
-										<li><a href="joinus.html">Join Us!</a></li>
-									</ul>
-								</nav>
-
-						</div>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-		<!-- Scripts for image link animations -->
-			<script>
-				function expand(element) {
-					element.style.marginTop = "-1%";
-				}
-				function shrink(element) {
-					element.style.marginTop = "0%";
-				}
-			</script>
-
-	</body>
+      <footer class="footer">Safe and Intelligent Autonomy Lab at Stanford University.</footer>
+    </main>
+    <script src="assets/js/site.js"></script>
+  </body>
 </html>

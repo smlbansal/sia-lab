@@ -1,7 +1,0 @@
-@article{herbert2017fastrack,
-  title={FaSTrack: a Modular Framework for Fast and Guaranteed Safe Motion Planning},
-  author={Herbert, Sylvia L and Chen, Mo and Han, SooJean and Bansal, Somil and Fisac, Jaime F and Tomlin, Claire J},
-  booktitle={56th Conference on Decision and Control (CDC)},  
-  year={2017},
-  organization={IEEE}
-}

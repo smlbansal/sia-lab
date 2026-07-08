@@ -1,6 +1,0 @@
-@article{herbert2019reachability,
-  title={Reachability-Based Safety Guarantees using Efficient Initializations},
-  author={Herbert, Sylvia L and Ghosh, Shromona and Bansal, Somil and Tomlin, Claire J},
-  journal={arXiv preprint arXiv:1903.07715},
-  year={2019}
-}

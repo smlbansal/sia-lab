@@ -1,7 +1,0 @@
-@article{bansal2017hamilton,
-  title={{Hamilton-Jacobi} Reachability: A Brief Overview and Recent Advances},
-  author={Bansal, Somil and Chen, Mo and Herbert, Sylvia and Tomlin, Claire J},
-  booktitle={56th Conference on Decision and Control (CDC)},  
-  year={2017},
-  organization={IEEE}
-}
