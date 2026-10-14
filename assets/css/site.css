@@ -92,14 +92,27 @@ h3 {
 }
 
 .brand {
-  color: var(--text);
-  font-size: 1.05em;
-  font-weight: 600;
-  white-space: nowrap;
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  gap: 16px;
 }
 
-.brand span {
-  color: var(--cardinal);
+.brand img {
+  display: block;
+  height: 60px;
+  width: auto;
+}
+
+.brand img + .brand-divider + img {
+  height: 38px;
+}
+
+.brand-divider {
+  background: var(--muted);
+  height: 44px;
+  opacity: 0.45;
+  width: 1px;
 }
 
 .nav-links {
@@ -769,12 +782,28 @@ button.button:hover {
     display: inline-flex;
   }
 
+  .brand {
+    gap: 10px;
+  }
+
+  .brand img {
+    height: 40px;
+  }
+
+  .brand img + .brand-divider + img {
+    height: 26px;
+  }
+
+  .brand-divider {
+    height: 30px;
+  }
+
   .nav-links {
     background: var(--bg);
     border-bottom: 1px solid var(--border);
     display: none;
     flex-direction: column;
-    inset: 56px 0 auto;
+    inset: 65px 0 auto;
     padding: 0.75rem 1.1rem 1rem;
     position: fixed;
   }
