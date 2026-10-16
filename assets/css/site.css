@@ -755,6 +755,22 @@ button.button:hover {
   display: grid;
 }
 
+.publication-year + .publication-year {
+  margin-top: 1.5rem;
+}
+
+.year-heading {
+  border-bottom: 1px solid var(--border);
+  color: var(--cardinal);
+  font-size: 1.15em;
+  padding-bottom: 0.3rem;
+}
+
+/* Hide a year until at least one of its papers is shown by "Show More". */
+.publication-year:not(:has(.publication-card:not(.is-extra), .publication-card.is-visible)) {
+  display: none;
+}
+
 .load-controls {
   display: flex;
   gap: 0.6rem;
